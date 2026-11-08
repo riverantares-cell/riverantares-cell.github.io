@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>銀河の加速度スケールは宇宙の年齢に従うのか？ 登録済みの予測 a0 ∝ 1/t を、遠方の銀河と照らし合わせる</title>
+<meta name="description" content="銀河の加速度スケールは宇宙の年齢に従うのか？ 登録済みの予測 a0 ∝ 1/t を、遠方の銀河と照らし合わせる MM レコード 2.42.1（DOI 10.5281/zenodo.23329094）の学生向け版です。アーカイブされた本文をもとに AI アシスタントの助けを借りて書かれました。アーカイブされた本文は Zenodo に保管されています。">
+<meta name="author" content="Ugo Lanciano">
+<link rel="canonical" href="https://riverantares-cell.github.io/mm-2-42-1-ja.html">
+<link rel="alternate" hreflang="en" href="https://riverantares-cell.github.io/mm-2-42-1.html">
+<link rel="alternate" hreflang="it" href="https://riverantares-cell.github.io/mm-2-42-1-it.html">
+<link rel="alternate" hreflang="es" href="https://riverantares-cell.github.io/mm-2-42-1-es.html">
+<link rel="alternate" hreflang="fr" href="https://riverantares-cell.github.io/mm-2-42-1-fr.html">
+<link rel="alternate" hreflang="ja" href="https://riverantares-cell.github.io/mm-2-42-1-ja.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://riverantares-cell.github.io/mm-2-42-1-zh.html">
+<link rel="alternate" hreflang="pt-BR" href="https://riverantares-cell.github.io/mm-2-42-1-pt.html">
+<link rel="alternate" hreflang="de" href="https://riverantares-cell.github.io/mm-2-42-1-de.html">
+<link rel="alternate" hreflang="ru" href="https://riverantares-cell.github.io/mm-2-42-1-ru.html">
+<link rel="alternate" hreflang="x-default" href="https://riverantares-cell.github.io/mm-2-42-1.html">
+<style>
+:root{--testo:#1d1d1f;--tenue:#5a5a5f;--fondo:#ffffff;--riga:#e3e3e6;--link:#1a56a8}
+@media (prefers-color-scheme: dark){:root{--testo:#e8e8ea;--tenue:#a3a3a8;--fondo:#16171a;--riga:#2c2d31;--link:#8ab4f8}}
+*{box-sizing:border-box}body{margin:0;background:var(--fondo);color:var(--testo);font:17px/1.6 Georgia,'Times New Roman',serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px 64px}a{color:var(--link)}h1{font-size:1.7em;line-height:1.25;margin:.2em 0 .4em}
+h2{font-size:1.15em;margin:2em 0 .5em;border-bottom:1px solid var(--riga);padding-bottom:.2em}.tenue{color:var(--tenue);font-size:.92em}
+ol.lavori li{margin:.5em 0}nav{font-size:.9em;margin-bottom:1.5em}nav a{text-decoration:none}.blocco{border-left:3px solid var(--riga);padding-left:12px}
+.testo{overflow-wrap:anywhere}.testo h3{font-size:1.08em;margin:1.8em 0 .4em}.testo h4{font-size:1em;margin:1.4em 0 .3em}.testo img{max-width:100%;height:auto;background:#fff}
+.testo table{border-collapse:collapse;font-size:.85em;margin:1em 0;display:block;overflow-x:auto}.testo td,.testo th{border:1px solid var(--riga);padding:4px 6px;vertical-align:top}
+.testo blockquote{margin:1em 0;padding:.2em 0 .2em 14px;border-left:3px solid var(--riga)}.testo pre{overflow-x:auto;font-size:.85em}.testo li{margin:.25em 0}
+.testo .formula{display:block;overflow-x:auto;overflow-y:hidden;max-width:100%;padding:2px 0}mjx-container{max-width:100%}
+</style><script data-goatcounter="https://riverantares.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
+<body><main>
+<nav><a href="sugakuteki-busshitsusei.html">← 数学的物質性: 研究一覧</a> · <a href="mm-2-42-1.html" hreflang="en">English version</a> · <a href="mm-2-42-1-it.html" hreflang="it">Versione italiana</a> · <a href="mm-2-42-1-es.html" hreflang="es">Español</a> · <a href="mm-2-42-1-fr.html" hreflang="fr">Français</a> · <a href="mm-2-42-1-zh.html" hreflang="zh-Hans">简体中文</a> · <a href="mm-2-42-1-pt.html" hreflang="pt-BR">Português (Brasil)</a> · <a href="mm-2-42-1-de.html" hreflang="de">Deutsch</a> · <a href="mm-2-42-1-ru.html" hreflang="ru">Русский</a></nav>
+<h1>銀河の加速度スケールは宇宙の年齢に従うのか？ 登録済みの予測 a0 ∝ 1/t を、遠方の銀河と照らし合わせる</h1>
+<p><strong>Ugo Lanciano（ウーゴ・ランチャーノ）</strong> · 独立研究者、イタリア・ロクリ · ORCID <a href="https://orcid.org/0009-0008-7618-9635">0009-0008-7618-9635</a></p>
+<p class="tenue">バージョン 2.42.1, 2026-10-13 · Zenodo に保管: <a href="https://doi.org/10.5281/zenodo.23329094" data-goatcounter-click="zenodo/23329094">10.5281/zenodo.23329094</a> · ライセンス CC BY 4.0 · レコードに記載のとおり、AI アシスタントの助けを借りて作成されました。</p>
+<p class="tenue">学生向け版の PDF は英語です： <a href="mm-2-42-1.pdf" data-goatcounter-click="pdf/mm-2-42-1.pdf" hreflang="en">PDF（学生向け版）</a>.</p>
+<p class="blocco">読む順番: 銀河と宇宙論的スケール a₀ = cH₀/6 · 前: <a href="mm-2-46-1-ja.html">MM 2.46.1</a> · 次: <a href="mm-2-56-ja.html">MM 2.56</a></p>
+<div class="testo">
+<p><em>MM レコード 2.42.1（DOI 10.5281/zenodo.23329094）の学生向け版です。アーカイブされた本文をもとに AI アシスタントの助けを借りて書かれました。アーカイブされた本文は Zenodo に保管されています。</em></p>
+<p>アーカイブされた本文は英語です。</p>
+<p>Ugo Lanciano、2026 年 9-10 月。バージョン：Zenodo のレコードを参照してください。ライセンス CC BY 4.0。</p>
+<p><strong>最初から心に留めておくべき訂正。</strong> バージョン 2.42.1 には、訂正を述べた節、第 12 節が加わっています。この研究で検証する時計の法則は、著者の前提ではありません。それは AI アシスタントによる*翻訳*、つまり著者の考えを式で書く一つの仕方です。後続のレコードは別の法則 a0 ∝ H(z) を用いています。そのレコードは MUSE-DARK III のデータを見てこの法則を選び、将来のデータのために登録しました。この研究のプログラム、結果、計算のログはすべて変わりません。</p>
+<p>MM、すなわち数学的物質性は、著者の考えの枠組みです。著者には*遠位スケール*、つまり宇宙全体に結びついた遠いスケールという考えがあります。このレコードは、アシスタントがその考えを翻訳した仕方、すなわち宇宙の年齢に結びつけるという仕方を検証します。第 12 節でこの違いを明らかにします。</p>
+<h3>始める前に：必要な言葉</h3>
+<p><strong>銀河は回転しています。</strong> 円盤銀河は、星とガスからなる巨大な円盤で、回転しています。星とガスは中心のまわりを回ります。中心からのそれぞれの距離で、回る速度を測ることができます。中心からの距離の関数として速度を描いたグラフを*回転曲線*と呼びます。</p>
+<p><strong>予想されること。</strong> 太陽系では、遠い惑星は近い惑星よりもゆっくり回ります。海王星は地球よりもゆっくり進みます。ニュートンの法則と目に見える物質だけを使うと、銀河の遠い星も、よりゆっくり回るはずです。ところが銀河では、中心から遠くても速度は高いままです。</p>
+<p><strong>加速度。</strong> 円を描いて回る物体は、常に同じ速さで進んでいても、中心に向かう加速度をもちます。運動の向きが変わるからです。加速度は、速度が一秒ごとに大きさまたは向きをどれだけ変えるかを表します。単位はメートル毎秒毎秒、m s⁻² です。</p>
+<p><strong>動径加速度関係。</strong> 天文学者は、銀河のそれぞれの点で二つの加速度を比べます。一つ目は星とガスの運動から得られる*観測された*加速度 g_obs です。二つ目は、通常の物質だけがニュートンの法則で与えるはずの加速度 g_bar です。この二つのつながりを*動径加速度関係*と呼びます。このつながりには、<strong>a0</strong> と呼ばれるただ一つのスケールがあります。</p>
+<p><strong>a0 の大きさ。</strong> a0 ≈ 1.2 × 10⁻¹⁰ m s⁻² です。とても小さな数です。私たちが選んだ数での例です。この加速度では、静止した物体が毎秒一メートルの速さに達するのに約 260 年かかります。加速度が a0 よりずっと大きいところでは、ニュートンの法則が成り立ちます。それより小さいところでは、重力は目に見える物質から言えるよりも強く見えます。</p>
+<p><strong>通常の物質と暗黒物質。</strong> 通常の物質は*バリオン*でできています。星、ガス、惑星の物質です。観測された引力がバリオンの引力より大きいとき、その差は*暗黒物質*によるものとされます。</p>
+<p><strong>遠くを見ることは過去を見ること。</strong> 遠い銀河の光は、ずっと前に出発しました。光が旅をするあいだに宇宙は膨張し、光は引き伸ばされます。波長は赤い側にずれます。この赤方偏移を <strong>z</strong> で表します。たとえば z = 1 は、旅のあいだに波長が二倍になったことを意味します。z が大きいほど、より過去を見ていることになります。</p>
+<p><strong>宇宙の年齢。</strong> この研究の計算では、今日の年齢は t0 = 13.778 Gyr です。Gyr は十億年を意味します。z = 2 の銀河を見るとき、私たちは宇宙がずっと若かったころの姿を見ています。</p>
+<p><strong>dex。</strong> 多くの結果は <em>dex</em> で書かれています。一 dex は、対数目盛での十倍の因子です。0.3 dex は二倍の因子です。つまり <em>+0.3 dex</em> はおよそ二倍、<em>−0.3 dex</em> はおよそ半分を意味します。</p>
+<p><strong>χ² と σ。</strong> χ²（<em>カイ二乗*と読みます）は誤差の点数のようなものです。法則がデータからどれだけ離れているかをまとめて表します。低いほど、法則はデータによく従っています。σ（シグマ）は測定の典型的な誤差です。ある値が *4 σ</em> だと言うのは、別の値から典型的な誤差の四つ分離れているという意味です。</p>
+<h3>手短に</h3>
+<p><strong>問い。</strong> 円盤銀河では、動径加速度関係にはただ一つのスケール a0 ≈ 1.2 × 10⁻¹⁰ m s⁻² があります。この数は cH0/2π（Milgrom 1983）に近い値です。ここで c は光の速さ、H0 は今日の宇宙の膨張の速さを表します。では、a0 は宇宙の時間とともに変わるのでしょうか。これは z ~ 1-2 の遠方銀河の回転曲線で検証できます（Milgrom 2015, 2017）。研究 MUSE-DARK III（Ciocan ら、2026）は、a0 が赤方偏移とともに増えると報告しています。</p>
+<p><strong>あらかじめ定めた法則。</strong> このレコードは、これらの比較を行う前に法則を定めました。ただし、データセットはすでに知られていました。この法則を <strong>CT1</strong> と呼びます。</p>
+<p>a0(z)/a0(0) = t0/t(z)。</p>
+<p>言葉で言うと、ある時代の a0 の値を今日の値で割ったものは、今日の年齢をその時代の年齢で割ったものに等しい、ということです。宇宙が若いほど、a0 は大きくなります。新しい数を使わない例です。宇宙が今日の年齢の半分なら、a0 は二倍になります。</p>
+<ul><li>宇宙の年齢 t は、MM 2.32 の膨張の歴史から計算します。その計算チェーンの 8896 個のサンプルをすべて使います。</li><li>時計はモデルの始まりから動き出します。</li><li>CT1 は、a0 が z = 1 で 2.35 倍、z = 2 で 4.18 倍大きいと予測します。</li><li>宇宙論に由来する不確かさは小さいものです。95 % バンドは z = 1 で ±0.42 %、z = 2 で ±0.49 % です。</li></ul>
+<p><strong>独立したチェック。</strong> 同じ時計を、ΛCDM と呼ばれる標準的な宇宙論でも計算しました。差は z = 1 で 0.14 %、z = 2 で 0.35 % です。サンプルごとに比べると、z = 2.5 で最大 1.8 % に達します。つまり、このテストが検証するのは時計であり、MM の宇宙論ではありません。</p>
+<p><strong>公表データとの四つの比較。</strong> 最初の三つは、額面どおりに受け取ると、一定の a0 を優位とします。</p>
+<ul><li><strong>RC100。</strong> z = 0.6 から z = 2.5 までの 100 個の銀河です。z ≥ 2 の銀河については、<em>有効半径</em>、つまり光の半分を含む半径での暗黒物質の割合を見ます。運動学から、一定の a0 では予測される割合は 0.24 です。CT1 では 0.63 です。公表された値は 0.26 です。</li><li><strong>MUSE-DARK II。</strong> z ≈ 1 の、質量の小さい 95 個の銀河です。これらの銀河では、*バリオンのタリー–フィッシャー関係*は変わりません。ゼロ点のずれは 0.00 ± 0.06 dex です。（ゼロ点とは何かは第 3 節で見ます。）一方 CT1 は、ここで仮定する低加速度の領域で、−0.26 から −0.32 dex のずれを予測します。</li><li><strong>KMOS3D。</strong> 質量の大きな銀河です。ゼロ点は z ≈ 0.9 から z ≈ 2.3 にかけて 0.17 dex 上がります。一方 CT1 は約 0.2 dex の低下を予測します。</li></ul>
+<p><strong>四つ目の比較は逆の向きを示します。</strong> それは <strong>MUSE-DARK III</strong> で、z = 0.5 から z = 1.3 までの、*ビン*と呼ばれる銀河の四つのグループです。値は、公表された図の*デジタル化*から得られています。つまり、誰かがグラフから値を一点ずつ読み取ったものです。</p>
+<ul><li>ここでは a0 は赤方偏移とともに増え、一定の a0 が最も悪い法則です。</li><li>局所的な較正を固定すると、CT1 は a0 ∝ H よりも名目上の統計量が良くなります。</li><li>逆に振幅を自由にすると、H のほうが増え方の形をよく記述します。</li><li>測定された増え方は CT1 の増え方より緩やかです。最後のビンと最初のビンのあいだで、a0 は 1.36 倍に増えます。CT1 は 1.75 倍と予測します。</li></ul>
+<p>したがって、データセットどうしは互いに緊張関係にあります。考えられる説明の一つは、質量の測り方がそれぞれ違うことです。このレコードは、この説明を切り分けてはいません。</p>
+<p><strong>CT1 に必要なもの。</strong> 最初の比較と一致するには、CT1 は、用いたものより通常の物質が少ない銀河を必要とします。</p>
+<ul><li>z ≥ 2 の RC100 では、CT1 の名目上の χ² を最小にする質量のずれは、採用したバリオン質量の約半分に相当します。</li><li>z &lt; 1.2 では、質量の 0.78 倍に相当します。</li><li>仮定した領域では、MUSE-DARK II も 0.48 から 0.55 という同様の係数を必要とします。</li><li>z ≥ 2 の中心値では、CT1 が必要とする質量は、RC100 の 41 個の銀河のうち 26 個で、星だけの質量より小さくなります。</li></ul>
+<p><strong>測定されたガスが言うこと。</strong> z ≈ 1-2 の、星を形成している銀河のガスの測定は、逆の向きを示します。</p>
+<ul><li>分子ガスは、一酸化炭素（CO）という分子のスペクトル線と塵から測定されます。これらの測定は 1444 個の銀河で、三つの方法で較正されています。z ≈ 2 では、分子ガスは星と同程度か、それより多くなります。</li><li>z ≈ 1 の原子状水素は、平均して星と同じ質量をもちます。</li><li>これらは銀河の集団全体についての結果です。ここで比較する銀河の測定ではありません。</li></ul>
+<p><strong>結果。</strong> <strong>CT1 は、登録された形では、採用した比較と緊張関係にあります。この緊張は、質量モデルと、明示した単純化に依存します。</strong> この結果が関わるのは読み CT1、つまり宇宙年齢の時計です。MM の枠組みを検証するものではありません（第 7 節）。</p>
+<h3>1. 検証する法則（CT1）</h3>
+<p><strong>法則。</strong> a0(z) = a0(0) · t0/t(z)。</p>
+<ul><li>t(z) は、赤方偏移 z に見える時代の宇宙の年齢です。式では t(z) = ∫_z^∞ dz′/[(1 + z′) H(z′)] です。</li><li>この年齢を*共動 FLRW コングルエンスの固有年齢*と呼びます。簡単な言葉で言うと、宇宙の膨張とともに動く時計、つまり膨張に運ばれる銀河のような時計が刻む時間です。</li><li>H は宇宙の膨張率です。ここで H は MM 2.32 から得られます。</li></ul>
+<p><strong>仮定。</strong> これらは考えと数をつなぐ*橋*です。2.32 の方程式から導かれたものではありません。</p>
+<ol><li><strong>媒質の時計は宇宙の年齢です。</strong> 式では U^μ∇_μT = 1、モデルの初期面で T = 0 です。これは、モデルの始まりから、物質の運動に沿って T が一秒ごとに一秒増えることを意味します。すると T = t となり、時計はちょうど宇宙の年齢を示します。銀河ごとに異なる形成年齢はなく、オフセットもありません。</li><li><strong>a0 = ξc/T。</strong> ここで ξ（<em>クシー*と読みます）は、どこでも常に同じ数です。今日の局所的な値 a0(0) = 1.2 × 10⁻¹⁰ m s⁻² から得られます。これにより ξ = 0.174 となります。これは*較正</em>、つまり測定に合わせて調整した値です。予測ではありません。</li><li><strong>いつもと同じ動径の法則。</strong> 値 a0(z) は、研究プログラムですでに採用している動径の法則に入ります。動径加速度関係の「MLS」形式で、g_obs = g_bar/[1 − exp(−√(g_bar/a0))] です。この式は、通常の物質の加速度 g_bar から、観測された加速度 g_obs をどう求めるかを示します。</li><li><strong>銀河は適切な領域にあります。</strong> 検証する銀河は、その法則が成り立つところにあると仮定します。外部場、圧力、銀河の選択は、どの仮説でも同じように扱います。</li></ol>
+<p><strong>数値。</strong> プログラム <code>codice/ct1_previsione.py</code> で計算します。95 % バンドは宇宙論的な不確かさだけを考慮しています。角括弧の中がバンドで、ΛCDM は標準的な宇宙論です。</p>
+<table><tr><th>z</th><th>CT1、a0(z)/a0(0)</th><th>ΛCDM での同じ時計（独立したチェック）</th><th>a0 ∝ H</th><th>バリオンのタリー–フィッシャーのずれ、漸近値（dex）</th></tr><tr><td>0.5</td><td>1.6025 [1.5975, 1.6081]</td><td>1.6024</td><td>1.325</td><td>−0.205</td></tr><tr><td>1.0</td><td>2.3476 [2.3378, 2.3574]</td><td>2.3508</td><td>1.787</td><td>−0.371</td></tr><tr><td>1.5</td><td>3.2127 [3.1978, 3.2274]</td><td>3.2211</td><td>2.356</td><td>−0.507</td></tr><tr><td>2.0</td><td>4.1810 [4.1606, 4.2014]</td><td>4.1956</td><td>3.009</td><td>−0.621</td></tr><tr><td>2.5</td><td>5.2409 [5.2143, 5.2676]</td><td>5.2622</td><td>3.734</td><td>−0.719</td></tr></table>
+<p>行の読み方です。z = 2 で CT1 は、今日の 4.1810 倍の a0 を予測します。バンドは 4.1606 から 4.2014 までです。ΛCDM での同じ時計は 4.1956 を与えます。法則 a0 ∝ H は 3.009 を与えます。最後の列は、バリオンのタリー–フィッシャー関係のゼロ点が、極端な場合にどれだけ下がるかを示します。−0.621 dex です。</p>
+<ul><li>今日の年齢は t0 = 13.778 Gyr です。バンドは 13.744 から 13.814 Gyr までです。</li><li>独立したチェックでは、チェーンの中央値 Ωm = 0.3066、h = 0.6764 をもつ平坦な ΛCDM 宇宙を使います。MM のプログラムは使いません。Ωm は宇宙に占める物質の割合、h は今日の膨張率を純粋な数として書いたものです。</li></ul>
+<p><strong>代替の法則。</strong> 同じ宇宙論的背景と同じ規格化で計算します。</p>
+<ul><li><strong>一定の a0。</strong> a0 はけっして変わりません。</li><li><strong>a0 ∝ H。</strong> a0 は膨張率 H に比例します。この法則は Milgrom（2015）が検討しました。</li><li><strong>Verlinde。</strong> Verlinde（2016）の研究では、宇宙論的な加速度 cH0 がスケールを定めます。MOND 型のスケールは a_M = cH0/6 です。ただし、その研究は置き換え H0 → H(z) を導いてはいません。つまり、スケールが時間とともに H に従うとは言っていません。また、その研究は自らの近似の宇宙論的な限界を論じています。</li></ul>
+<p><strong>成功したら何が示され、何が示されないか。</strong> その推論は文書 <code>documenti/SHAPE_TEST_REPORT_astra_IT.md</code> にあります。</p>
+<ul><li>法則 CT1 では、1/a0 はルックバック時間について*アフィン*になります。*ルックバック時間*とは、光がどれだけ前に出発したかです。*アフィン*とは、グラフ上で点が一直線に並ぶことを意味します。</li><li>厳密な*縮退*が三つあります。縮退とは、二つの異なる法則が同じ数を与え、データでは区別できない場合のことです。</li><li>一定の a0 は、傾きゼロのアフィン形式を満たします。直線は水平です。</li><li>時計のゼロ点を自由にすると、比は一に近づき、一定の場合をまねます。</li><li>宇宙が物質に支配されていた*物質の時代*には、1/t と H は比例します。そこでは二つの法則を見分けられません。</li><li>時計のゼロ点を固定すると、CT1 には自由度が残りません。</li><li>成功は「a0 は宇宙の年齢に従う」という考えを支持します。とくに MM の宇宙論を支持するものではありません。</li><li>第二のアシスタントが設計研究を行いました。パイロットテストの合成的な方式である五つのビンを使いました。CT1 を a0 ∝ E^γ のような二つのパラメータをもつ代替案と区別するには、ln a0 でビンあたり約 3.4 % の精度が必要でした。これはその方式の結果です。一般的な規則ではありません。</li></ul>
+<h3>2. テスト 1：有効半径における暗黒物質の割合（RC100）</h3>
+<p><strong>データ。</strong> Nestor Shachar ら（2023）の表 3 から取っています。この表は銀河ごとに三つのものを与えています。</p>
+<ul><li>Re：有効半径で、光の半分を含みます。</li><li>Vc(Re)：その半径での円運動の速度です。</li><li>fDM(Re)：その半径での暗黒物質の割合です。速度の二乗のうち、バリオンでは説明のつかない部分です。</li></ul>
+<p>新しい数を使わない例です。fDM が 0.26 なら、その回転に必要な引力の約四分の一は通常の物質から来ていません。</p>
+<p><strong>質量の出どころ。</strong> この割合は、著者たちの*力学的分解*から得られています。著者たちは銀河の運動を、バリオンによる部分と暗黒物質による部分に分けます。</p>
+<ul><li>この分解では、バリオン質量は自由なパラメータで、データに合わせて調整されます。</li><li>ただし著者たちは、ガウス型の*事前分布*と呼ばれる基準値から出発します。その中心は、二つの質量を足し合わせたものです。</li><li>一つ目は星の質量です。<em>SED フィッティング</em>、つまりさまざまな色での銀河の光から得られます。</li><li>二つ目はガスの質量です。Tacconi ら（2020）の*スケーリング関係*、つまりガスを銀河のほかの性質に結びつける平均的な式から得られます。</li><li>表に載っているのは、調整された最終値です。</li></ul>
+<p><strong>端を越えた銀河。</strong> 銀河 U3 25105 は z = 2.52 にあります。z ≤ 2.5 までの CT1 のサンプルのグリッドのすぐ外です。テスト 1 と 3 では、その値は*外挿*、つまり端を越えて延長されています。</p>
+<ul><li>z = 2.50 から z = 2.52 への外挿された段は、因子 1.00829 です。</li><li>ΛCDM での同じ時計の厳密な段は 1.00845 です。</li><li>差は 0.016 % です。これには二つのものが混ざっています。MM と ΛCDM のずれと、外挿の誤差です。</li><li>同じ外挿を、同じグリッド上の厳密な ΛCDM の曲線で試すことができます。誤差は時計で −0.014 %、H で −0.007 % です。</li></ul>
+<p><strong>方法。</strong></p>
+<ul><li>運動学から観測された加速度 g_obs = Vc²/Re を得ます。</li><li>a0 についての各仮説で MLS 法則を解き、g_bar を求めます。</li><li>ここから予測される割合 f_pred = 1 − g_bar/g_obs が得られます。</li><li>予測される割合を、公表された fDM と比べます。</li><li>不確かさは fDM の誤差と Vc、Re の誤差を組み合わせたものです。誤差は互いに独立として扱います。</li><li>次に、log g_bar の共通のずれを −0.6 から +0.3 dex まで試します。これは、すべての銀河で同じ、バリオン質量の系統誤差を表します。</li><li>報告するずれは、名目上の χ² を最小にするものです。それだけで、すべてが合うことを示すわけではありません。</li></ul>
+<p><strong>z ≥ 2 の 41 個の銀河の結果。</strong> z の中央値は 2.22 です。</p>
+<table><tr><th>仮説</th><th>予測される割合（中央値）</th><th>公表値（中央値）</th><th>名目上の χ²</th><th>−2σ より下</th><th>χ² を最小にする質量のずれ</th></tr><tr><td>一定の a0</td><td>0.24</td><td>0.26</td><td>68.9</td><td>2</td><td>0.00 dex</td></tr><tr><td>a0 ∝ H</td><td>0.55</td><td>0.26</td><td>189.6</td><td>17</td><td>−0.21 dex</td></tr><tr><td>CT1</td><td>0.63</td><td>0.26</td><td>278.5</td><td>19</td><td>−0.32 dex</td></tr></table>
+<p>読み方です。一定の a0 では、予測される割合 0.24 は公表値 0.26 に近い値です。χ² は 68.9 で、−2σ より下の銀河は 2 個だけです。CT1 では予測される割合は 0.63 で、χ² は 278.5 に上がり、19 個の銀河が −2σ より下になります。より良くするには、CT1 は 0.32 dex 小さい質量を必要とします。</p>
+<p><strong>より近い銀河。</strong> z &lt; 1.2 には 32 個の銀河があります。χ² は一定の a0 で 68.2、CT1 で 101.8 です。CT1 は −0.11 dex を必要とします。</p>
+<p><strong>登録済みの期待。</strong> 計算の前に書いた四つの期待（E1-E4）は、すべて実現しました。</p>
+<p><strong>限界。</strong> 銀河あたりの χ² は、一定の a0 でも 1.7-2.1 です。これは二つのことを意味しえます。名目上の誤差が狭すぎるのかもしれません。あるいは、無視した共分散（互いに結びついた誤差）とモデルの不完全さが効いているのかもしれません。</p>
+<p><strong>先例。</strong> これは Milgrom（2017）の方向に沿っています。Milgrom は Genzel ら（2017）の六個の銀河を調べました。そして、これらのデータは z ~ 2 での a0 ≈ 4a0(0) を「ほぼ排除する」（"all but exclude"）と書きました。簡単な言葉で言うと、z ~ 2 の a0 が今日の四倍であることをほとんど排除している、ということです。</p>
+<h3>3. テスト 2：バリオンのタリー–フィッシャー関係（MUSE-DARK II、KMOS3D）</h3>
+<p><strong>これは何か。</strong> 質量の大きい銀河ほど速く回転します。*バリオンのタリー–フィッシャー関係*は、銀河の通常の物質の質量 Mbar を、その回転速度 V に結びつけます。対数目盛のグラフでは、点はほぼ一直線に並びます。</p>
+<p><strong>ゼロ点。</strong> 傾きを固定したときの、その直線の高さです。専門用語では、log V に対する log Mbar の切片です。ゼロ点が下がると、同じ速度で銀河の質量は少なくなります。</p>
+<p><strong>なぜ RC100 をもう一度使わないのか。</strong> 同じ銀河で作ったタリー–フィッシャー関係は、テスト 1 を繰り返すことになります。</p>
+<p><strong>方法。</strong></p>
+<ul><li>半径と速度を固定して MLS 法則を使います。</li><li>領域 y0 = g_bar/a0(0) にある銀河を見ます。数 y0 は、通常の物質の加速度が今日の a0 に比べてどれだけ大きいかを表します。</li><li>a0 が増えて a0(z) = R(z)a0(0) となると、銀河は a0(0) のときに必要なバリオン質量の k 倍を必要とします。</li><li>ゼロ点のずれは log10 k となります。</li><li>非常に低い加速度の領域である*深い領域*では、ずれは −log10 R(z) に近づきます。</li><li>高い加速度の領域である*ニュートン領域*では、ずれはゼロに近づきます。</li><li>銀河の大きさは固定します。</li></ul>
+<h4>MUSE-DARK II</h4>
+<p><strong>RC100 とは独立です。</strong> 銀河は小さく、回転が遅いものです。</p>
+<p><strong>領域についての仮定。</strong> このレコードは、2Re、つまり有効半径の二倍の位置での速度が低い加速度 y0 ≲ 0.3 にあると仮定します。そこでは関係は、大きさよりも a0 に依存します。以下のずれはその領域で成り立ちます。</p>
+<p><strong>代表的な銀河。</strong> 出典は典型的な銀河を記述しています。</p>
+<ul><li>星の質量は M* = 10⁹ 太陽質量です。</li><li>回転速度は 1.8Re で 70 km/s です。</li><li>速度の*分散*は 30 km/s です。これは星とガスの速度が平均の運動のまわりにどれだけ散らばっているかです。</li><li>回転と分散を合わせると、円運動の速度は約 86 km/s です。</li><li>この銀河だけでは領域は確定しません。出典は、その半径もバリオンの分布も示していません。</li></ul>
+<table><tr><th>仮説</th><th>予測されるずれ（y0 0.05-0.3）</th><th>0.00 ± 0.06（公表された当てはめ）からの隔たり</th><th>共通の ±0.20 dex を加えた場合（ここで選んだシナリオ）</th></tr><tr><td>一定の a0</td><td>0.00</td><td>0 σ</td><td>0 σ</td></tr><tr><td>a0 ∝ H</td><td>−0.17 から −0.21</td><td>2.8-3.6 σ</td><td>0.8-1.0 σ</td></tr><tr><td>CT1</td><td>−0.26 から −0.32</td><td>4.3-5.3 σ</td><td>1.2-1.5 σ</td></tr></table>
+<p>読み方です。公表されたゼロ点はずれていません。0.00 ± 0.06 dex です。CT1 は −0.26 から −0.32 dex を予測します。これは公表値から 4.3-5.3 σ の隔たりです。</p>
+<p><strong>最後の列。</strong> 公表された当てはめの ±0.06 dex には、著者たちが個々のバリオン質量に与えた ±0.20 dex がすでに含まれています。最後の列は、同じ量を、すべての質量に共通の誤差としてもう一度加えたものです。これはこのレコードが選んだシナリオです。出典が示す誤差の計算方法ではありません。この追加の誤差があると、CT1 は 1.2-1.5 σ まで下がります。</p>
+<p><strong>CT1 に必要なもの。</strong></p>
+<ul><li>本当のバリオン質量は、推定値の 0.48 から 0.55 倍でなければなりません。</li><li>星を固定すると、推定されたガスの 7-20 % しか残りません。</li><li>推定に占めるガスの割合 56 % は、代表的な銀河についての仮定です。</li><li>出典は二つの中央値を別々に示しています。分子ガス 34 %、原子ガス 22 % です。二つの中央値の和は、和の中央値であるとは限りません。</li></ul>
+<h4>KMOS3D</h4>
+<p><strong>独立ではありません。</strong> KMOS3D は RC100 と同じ銀河の集団を調べています。</p>
+<p><strong>測定されたもの。</strong> ゼロ点は z ≈ 0.9 から z ≈ 2.3 にかけて +0.17 ± 0.06 dex 上がります。</p>
+<p><strong>固定した領域で各法則が予測すること。</strong></p>
+<ul><li>CT1：0.17-0.21 dex の低下。</li><li>a0 ∝ H：0.13-0.17 dex の低下。</li><li>一定の a0：変化なし。</li></ul>
+<p><strong>モデルの限界。</strong> 固定した領域のモデルは、どの法則でもこの上昇を再現しません。考えられる説明の一つは銀河の構造の進化です。速度を測る半径の内側のバリオンが増えることです。</p>
+<h4>テスト 2 の登録済みの期待</h4>
+<ul><li><strong>T1 は実現しませんでした。</strong> 仮定した領域で、CT1 は −0.26 から −0.32 dex を与えます。登録済みの期待は −0.30 から −0.37 でした。</li><li><strong>T2-T4 は実現しました。</strong></li><li><strong>プロトコルの計算の誤り。</strong> プロトコルは、77.8 km/s の代わりに 61 km/s という代表速度を使っていました。この誤りは明示されています。領域は、上で述べたとおり仮定のままです。</li></ul>
+<h3>4. テスト 3：質量は過大評価されているのか？ 星と直接測定されたガス</h3>
+<p><strong>問い。</strong> 遠方の銀河の質量が、用いたものより小さければ、CT1 はより良くなります。では、質量は*過大評価*、つまり大きすぎる見積もりになっているのでしょうか。このテストはそれをチェックします。</p>
+<p><strong>方法。</strong></p>
+<ul><li>RC100 の各銀河について、ある仮説が必要とするバリオン質量を計算します。半径と質量分布は固定します。</li><li>式は Mbar_req = Mbar · (1 − f_pred)/(1 − fDM) です。</li><li>この質量を、SED フィッティングから得られる星だけの質量と比べます。星の質量はガスに依存しません。</li><li>テスト 3 は、RC100 のデータとテスト 1 の予測された割合を再利用します。</li><li>使ったガスのスケーリング関係（Tacconi ら 2018、表 3b）は縮約版です。大きさに依存する項 0.11 log(Re/Re,0) を省いています。</li></ul>
+<table><tr><th>z ≥ 2 の 41 個の銀河</th><th>必要なバリオン質量と星の質量の差（中央値）</th><th>星の質量を下回る銀河</th><th>示唆されるガスの割合（中央値）</th></tr><tr><td>一定の a0</td><td>+0.17 dex</td><td>7</td><td>33 %</td></tr><tr><td>a0 ∝ H</td><td>−0.04 dex</td><td>23</td><td>負</td></tr><tr><td>CT1</td><td>−0.16 dex</td><td>26</td><td>負</td></tr></table>
+<p>読み方です。銀河がもつ通常の物質は、その星より少なくなることはありません。星はすでに通常の物質だからです。一定の a0 では、必要な質量は星を上回り、残りはガスでありえます。33 % です。CT1 では、41 個の銀河のうち 26 個で、必要な質量が星を下回ります。示唆されるガスの割合は負になります。ゼロより少ないガスが必要になるということです。</p>
+<p><strong>より近い銀河。</strong> z &lt; 1.2 では、CT1 は星を +0.11 dex 上回る質量を必要とします。示唆されるガスは 23 % です。一定の a0 は +0.22 dex を必要とします。示唆されるガスは 39 % です。</p>
+<p><strong>スケーリング関係が言うこと。</strong> z ≥ 2 では、中央値で、星の 1.32 倍のガス質量を与えます。RC100 の力学的質量は、星とスケーリング関係のガスの和より、すでに 0.19 dex 下にあります。そして星だけより 0.22 dex 上にあります。</p>
+<p><strong>限界。</strong> これらの比較は中心値と固定した質量分布を使っています。星と力学的質量の不確かさは、計算の中で伝播させていません。</p>
+<p><strong>直接測定されたガス。</strong></p>
+<ul><li><strong>分子ガス。</strong> 分子ガスのスケーリング関係は、z = 0 から z = 4 までの、星を形成している 1444 個の銀河への当てはめです。ガスは三つの独立した方法で測定されています。CO のスペクトル線、遠赤外線での塵の光、波長約 1 mm での塵の測光です。ゼロ点をそろえると、三つの方法は同じ傾向に従います（Tacconi ら 2018）。</li><li><strong>どれだけ増えるか。</strong> 星に対する分子ガスの比は (1 + z)^2.5 のように増えます。過去にさかのぼるほど、星に比べてガスが多くなります。</li><li><strong>原子状水素。</strong> z ≈ 1 では、星を形成している多くの銀河の 21 cm の信号を足し合わせて測定します。平均すると、原子状水素は星と同じ質量をもちます（Chowdhury ら 2020）。ただし、信号を足し合わせて得た平均は、運動学的半径の内側の中央値の割合ではありません。</li><li><strong>これらの集団では、ガスはバリオンの大きな部分を占めます。</strong> 集団とガスの種類によって、約 35-60 % です。</li><li><strong>これらはここで比較する銀河の測定ではありません。</strong></li></ul>
+<p><strong>CT1 との比較。</strong></p>
+<ul><li>仮定した領域では、CT1 は、MUSE-DARK II の代表的な銀河のバリオンのうち 8-21 % しかガスであることを許しません。注意してください。これは前に見た、推定されたガスの 7-20 % とは別の量です。</li><li>z ≈ 2 の RC100 では、中心値で、CT1 は中央値で負のガス量を与えます。</li><li>ガス測定のゼロ点には、0.1-0.2 dex の共通の誤差がありえます。たとえば CO を分子状水素（H2）に換算する係数や、塵とガスの比から生じえます。これらの仮定のもとでは、それでは足りません。</li></ul>
+<p><strong>登録済みの期待。</strong> 登録済みの四つの期待（G1-G4）は、すべて実現しました。</p>
+<h3>5. テスト 4：MUSE-DARK III が報告する増加（z = 0.5-1.3）</h3>
+<p><strong>データ。</strong></p>
+<ul><li>a0(z) の四つのビンです。</li><li>Alcock の論文（MNRAS、DOI 10.1093/mnras/stag1485）の表 1 から取っています。</li><li>その表は Ciocan ら（MUSE-DARK III）の図 3 のデジタル化です。</li><li>ビンは銀河の力学的解析をまとめたものです。新しい測定ではありません。</li><li>表は、誤差棒がどの規約で与えられているかを述べていません。ビンの*共分散*、つまりそれらの誤差がどれだけ結びついているかも示していません。</li><li>誤差棒は対称にしました。</li></ul>
+<p><strong>方法。</strong> プロトコルは計算の前に書かれましたが、公表データが知られた後でした。</p>
+<ul><li><strong>SPARC での較正。</strong> a0(0) は、近傍の銀河を集めた SPARC だけで較正します。149 個の銀河と 3150 個の点です。MLS 法則を使います。星の質量と光の比は、円盤で 0.5、中心のバルジで 0.7 です。各銀河の重みは同じです。</li><li><strong>得られた値。</strong> a0(0) = 1.019 × 10⁻¹⁰ m s⁻² です。その後、この値は*凍結*され、もう変更しません。</li><li><strong>その不確かさ。</strong> *ブートストラップ*で見積もります。銀河を選び直しながら計算を何度も繰り返します。95 % バンドは 0.90 から 1.16 までです。星の質量（円盤とバルジ）に 0.8 を掛けると 1.29 に、1.2 を掛けると 0.83 になります。ガスは固定したままです。</li><li><strong>遠方のデータでの調整なし。</strong> 各法則は、遠方のデータへの当てはめなしに四つのビンを予測します。</li><li><strong>第二の診断。</strong> 各法則について振幅を一つ自由にします。こうすることで、増え方の*形*だけを検証します。</li><li><strong>誤差棒の読み方。</strong> プログラムは、ビンの誤差棒を 1σ として、対角の観測共分散（ビンの誤差は互いに結びつかない）で読みます。表の χ² の値はここから得られます。</li><li><strong>ほかのシナリオ。</strong> プロトコルにはほかのシナリオも含まれています。95 % として読んだ誤差棒、ビン間の相関、追加の系統誤差です。これらは第二のアシスタントの報告に示されています。ここで配布するプログラムは、それらを再計算しません。</li></ul>
+<table><tr><th>法則</th><th>z = 0.50 / 0.83 / 1.05 / 1.28 で予測される a0</th><th>名目上の統計量（4 ビン）</th><th>形の χ²（自由度 3）</th><th>最後のビン / 最初のビン</th></tr><tr><td>データ</td><td>1.99 / 2.20 / 2.57 / 2.71</td><td>—</td><td>—</td><td>1.36</td></tr><tr><td>一定の a0</td><td>1.02 / 1.02 / 1.02 / 1.02</td><td>168.6</td><td>28.8</td><td>1.00</td></tr><tr><td>a0 ∝ H</td><td>1.35 / 1.64 / 1.87 / 2.13</td><td>25.2</td><td>5.1</td><td>1.57</td></tr><tr><td>CT1</td><td>1.64 / 2.11 / 2.47 / 2.86</td><td>16.4</td><td>14.9</td><td>1.75</td></tr><tr><td>1 + z（データを見た後で選んだもの）</td><td>1.53 / 1.86 / 2.09 / 2.32</td><td>11.8</td><td>3.3</td><td>1.51</td></tr></table>
+<p><strong>単位。</strong> a0 の値の単位は 10⁻¹⁰ m s⁻² です。</p>
+<p><strong>名目上の統計量に含まれるもの。</strong> ビンの誤差、局所的な較正の広がり、サンプルの宇宙論的な広がりです。</p>
+<p><strong>二つの補足。</strong></p>
+<ul><li>これらの赤方偏移では、ΛCDM での同じ時計と CT1 の差は最大 0.2 % です。</li><li>テスト 1-3 は a0(0) = 1.2 × 10⁻¹⁰ m s⁻² を使います。テスト 4 は SPARC で独自の値 1.019 × 10⁻¹⁰ m s⁻² を較正します。形のテストはこの違いに依存しません。</li></ul>
+<p><strong>結果。</strong></p>
+<ul><li>MUSE-DARK III のビンは、一定の a0 より、変化する a0 を優位とします。一定の法則が最も悪い法則です。</li><li>局所的な較正を凍結すると、CT1 は a0 ∝ H より名目上の統計量が良くなります。16.4 対 25.2 です。</li><li>振幅を自由にすると、H のほうが形をよく記述します。χ² は 5.1 対 14.9、自由度は 3 です。</li><li>CT1 の中心の増え方はビンの増え方より急です。CT1 は z = 0.5 で低すぎ、z = 1.3 で高すぎます。</li><li>この比較は、要求されていた*頑健な*支持を与えません。しかし、最初の三つとは違う方向を向いています。</li><li>法則 1 + z が最もよく合います。しかしこれはデータを見た後で選んだもので、比較の基準にすぎません。</li></ul>
+<h3>6. テストが合わせて言うこと</h3>
+<p><strong>最初の三つの比較。</strong> 額面どおりに受け取ると、CT1 は、用いたものより小さい遠方の銀河のバリオン質量を必要とします。</p>
+<ul><li>z ≥ 2 の RC100 と、仮定した領域の MUSE-DARK II では約半分です。</li><li>z &lt; 1.2 の RC100 では 0.78 倍です。</li><li>これらは名目上の統計量を最小にするずれです。</li><li>z ≥ 2 の中心値では、41 個の銀河のうち 26 個で、CT1 は星より少ないバリオンを求めることになります。</li><li>一定の a0 は、RC100 と、MUSE-DARK II との単純化した比較を、CT1 よりよく記述します。</li><li>固定した領域のモデルは、どの法則でも KMOS3D のゼロ点の上昇（+0.17 ± 0.06 dex）を再現しません。銀河の構造の進化は考えられる説明の一つです。</li></ul>
+<p><strong>二つの MUSE-DARK の論文は、質量を同じ仕方で測っていません。</strong> サンプル、選択、観測量も違います。</p>
+<ul><li>論文 III は円盤の力学的規格化を使います。a0 の増加を見いだしています。</li><li>論文 II は SED フィッティングによる星の質量とスケーリング関係によるガスを使います。バリオンのタリー–フィッシャー関係に進化を見いだしていません。</li><li>質量の規格化の仕方は、この違いの考えられる説明の一つです。論文の中に記されています。このレコードはそれを切り分けてはいません。</li></ul>
+<p><strong>テスト 4 は緊張を反対側から示します。</strong> MUSE-DARK III のビンでは a0 は増えますが、CT1 より緩やかです。</p>
+<ul><li>z ≈ 2 での一定の a0（RC100）と z = 0.5-1.3 での増加（MUSE-DARK III）は緊張関係にあります。</li><li>ただし、論理的に両立しないわけではありません。単調でない進化（最初に上がり、その後下がる）、異なる銀河の集団、系統誤差が両者を調和させるかもしれません。</li><li>四つの比較のどれも、登録された形の CT1 に、要求された頑健な支持を与えません。</li></ul>
+<p><strong>ガス。</strong> 星を形成している銀河の集団のガスの測定は、z ≈ 1-2 で大きなガスの割合を確認しています。</p>
+<ul><li>これらはここで比較する銀河を測定してはいません。</li><li>星と力学的質量の不確かさは伝播させていません。</li><li>したがって「質量は過大評価されている」という考えは除外されません。しかし、それはこれらの集団の結果に反して成り立つものでなければなりません。</li></ul>
+<h3>7. 主張しないこと</h3>
+<ul><li><strong>a0 が一定であるとは主張しません。</strong> 比較は公表された質量と分解に依存します。</li><li><strong>CT1 が形式的に除外されたとは主張しません。</strong> 比較は公表された質量モデルに依存します。また、共分散を含む*同時尤度*、つまりすべてのデータを結びついた誤差とともにまとめる一つの計算は作っていません。ただし、登録された形では、RC100 の質量の中心値で、CT1 は z ≥ 2 の 41 個の銀河のうち 26 個で、星より少ないバリオンを必要とします。</li><li><strong>MM が検証されたとは主張しません。</strong> 検証されるのは時計の法則だけです。MM の膨張の歴史は、z = 2 で中心の予測を 0.35 % しか変えません（第 1 節の独立したチェック）。</li><li><strong>MUSE-DARK III のビンが独立した測定であるとは主張しません。</strong> それらは公表された図のデジタル化です。テスト 4 はそれらが知られた後で書かれました。法則 1 + z はそれらを見た後で選ばれました。</li><li><strong>テストが互いに独立であるとは主張しません。</strong></li><li>KMOS3D と RC100 は同じ銀河の集団です。</li><li>テスト 3 はテスト 1 を再利用しています。</li><li>テスト 1-3 はガスのスケーリング関係に依存しています。RC100 の事前分布と MUSE-DARK II のガスです。</li><li>テスト 4 は SPARC での較正と MUSE-DARK III の力学的規格化に依存しています。</li><li><strong>a0(0) や ξ が導かれたとは主張しません。</strong> どちらも較正された値です。銀河のデータで R(z) が変わることはありません。規格化は近傍の銀河で較正され、遠方のデータへの当てはめは診断にのみ役立ちます。</li><li><strong>別の時計ならより良くなるとは主張しません。</strong> もっと後から動き出す時計は新しい仮説になります。これらのデータに合わせて調整するのではなく、独立したデータの前に書かれなければなりません。</li></ul>
+<h3>12. 訂正（バージョン 2.42.1 で追加、2026 年 10 月）</h3>
+<p><strong>変わること。</strong></p>
+<ul><li>第 1 節の仮定 1-2 は、加速度スケールを宇宙の年齢を読む時計に結びつけています。</li><li>このつながりは、AI アシスタントが導入した翻訳でした。著者の前提ではありません。</li><li>著者による遠位スケールの読みは*ハッブル半径* R_H です。宇宙の膨張が銀河を光の速さで運び去る距離です。</li><li>a0 が、赤方偏移に依存しない因子をつけて c²/R_H に比例するとしましょう。</li><li>R_H = c/H と同定すると、a0 ∝ H(z) が得られます。a0 ∝ 1/t は得られません。</li></ul>
+<p><strong>この研究のデータがすでに言っていたこと。</strong> 第 5 節は二つの結果を報告しています。</p>
+<ul><li>振幅を自由にすると、H の法則は MUSE-DARK III のビンを CT1 よりよく記述します。χ² は 5.1 対 14.9、自由度は 3 です。</li><li>局所的な較正を凍結すると、CT1 のほうが名目上は良い値でした。16.4 対 25.2 です。</li></ul>
+<p><strong>後続のレコード。</strong></p>
+<ul><li>後続のレコードの題は*一つの隠れたセクターの読みで、暗黒物質のいくつもの謎を説明できるか？*（Zenodo、2026 年 10 月）です。このレコードの関連研究の中に見つかります。</li><li>そのレコードは Ωm = 0.315 で比較を繰り返します。H で χ² 5.5、年齢の法則で 15.3 を得ています。</li><li>そのレコードは a0(z) = A·H(z)/H0 を*現象論的*な法則として採用しています。つまり、これらのデータを記述するから選んだ法則です。確認された法則ではありません。</li><li>そのレコードは、この法則を将来のデータのために登録しています。法則の形は規格化とは別に検証します。A は銀河の均質なサンプルごとに自由です。局所的な値は別のテストとして扱います。</li></ul>
+<p><strong>変わらないこと。</strong> CT1 は、四つの比較と第 6 節の緊張とともに、ここで登録されたとおりのままです。この研究のプログラム、結果、計算のログはすべて、バージョン 2.42 と同一です。</p>
+<h3>研究の進め方</h3>
+<p><strong>作業上の名前。</strong> 作業記録（<code>records/</code>、古いログとノート）では、このレコードは 2.40 と呼ばれています。それが暫定的な名前でした。環境変数 MM240_SPARC_DIR はその名前を保っています。</p>
+<p><strong>誰が何をしたか。</strong> 著者は職業的な物理学者ではありません。枠組みとその前提は著者のものです。計算は AI アシスタントで行いました。</p>
+<ul><li>CT1 のサンプル、形のテスト、テスト 4 は第二のアシスタント（Codex、「Astra」）が行いました。</li><li>最初の三つのテストは Claude が行いました。</li><li>その後テスト 4 は、Claude が別のコードで再計算しました。フォルダ <code>codice/</code> にあるのがそれです。数は一致しています（<code>records/NOTA_ESITO_CONTROLLO_MUSE_DARK3.md</code>）。</li></ul>
+<p><strong>登録。</strong> 各プロトコルは計算の前に書かれ、そのデジタル指紋（SHA-256）は計算の前に求められました（<code>records/</code>）。指紋には公開のタイムスタンプはありません。</p>
+<p><strong>明示していること。</strong> 登録済みの期待の一つ（T1）は実現しませんでした。また、プロトコルの一つには計算の誤りがあります。どちらも報告しています。</p>
+<p><strong>プロトコルとテストのノート。</strong></p>
+<ul><li>テスト 1：プログラム <code>codice/controllo_z2.py</code>、プロトコル <code>records/PROTOCOLLO_CONTROLLO_Z2.md</code>、データ <code>dati/rc100_table3.csv</code>。同じプログラムが銀河 U3 25105 の外挿の誤差を出力します。</li><li>テスト 2：プログラム <code>codice/controllo_tully_fisher.py</code>、プロトコル <code>records/PROTOCOLLO_CONTROLLO_TF.md</code>。プロトコルの計算の誤りは <code>records/NOTA_ESITO_CONTROLLO_TF.md</code> に明示されています。</li><li>テスト 3：プログラム <code>codice/controllo_gas.py</code>、プロトコル <code>records/PROTOCOLLO_CONTROLLO_GAS.md</code>。</li><li>テスト 4：プログラム <code>codice/controllo_muse_dark3.py</code>、プロトコル <code>records/PROTOCOL_CLOCK_TEST_astra.md</code>、データ <code>dati/muse_dark3_bins_alcock.csv</code>。プロトコルのほかのシナリオは報告 <code>documenti/CLOCK_TEST_REPORT_astra_IT.md</code> にあります。</li><li>CT1 の予測：プログラム <code>codice/ct1_previsione.py</code>。形の研究：<code>documenti/SHAPE_TEST_REPORT_astra_IT.md</code>。</li></ul>
+<p><strong>公開前の査読。</strong> 第二のアシスタントが公開前に草稿を査読しました。二回のラウンドの報告は <code>documenti/REVIEW_astra_20261011_IT.md</code> と <code>documenti/REVIEW_astra_20261011_round2_IT.md</code> にあります。訂正は <code>documenti/CORRECTIONS_before_publication.md</code> に一覧があります。</p>
+<p><strong>基準の出力。</strong> Python 3.13.13、numpy 2.4.6、scipy 1.18.0、matplotlib 3.11.1 で再生成しました。数は変わりませんでした。出力されるラベルのいくつかは訂正しました。</p>
+<p><strong>訂正された文。</strong> 以前の作業ノートにあった、RC100 の質量の由来についての文は不正確でした。<code>records/NOTA_ESITO_CONTROLLO_GAS.md</code> で訂正しています。</p>
+<p><strong>人間の査読者は</strong>このレコードをチェックしていません。</p>
+<p><strong>計算のやり直し方</strong>（numpy、scipy、matplotlib を備えた Python 3）。</p>
+<pre>python codice/run_all.py        # the five programs; outputs in uscite/, compared with risultati/ (about one minute);
+                                # exit code 0 only if every log and JSON is reproduced identically
+python codice/ct1_previsione.py
+python codice/controllo_z2.py
+python codice/controllo_tully_fisher.py
+python codice/controllo_gas.py
+python codice/controllo_muse_dark3.py</pre>
+<ul><li>テスト 4 には SPARC コレクション（Lelli、McGaugh、Schombert 2016）の二つのファイルが必要です。ここでは再配布していません。<code>SPARC_Lelli2016c.mrt</code> と <code>Rotmod_LTG.zip</code> で、http://astroweb.case.edu/SPARC/ から入手できます。</li><li>これらは <code>dati/esterni/</code> か、環境変数 MM240_SPARC_DIR が示すフォルダに置かなければなりません。</li><li>プログラムは <code>dati/README.md</code> に載っている SHA-256 指紋をチェックします。</li></ul>
+<p><strong>歴史的なプログラム。</strong> <code>documenti/calcola_ct1_astra.py</code> は <code>dati/ct1_campioni.npz</code> を生成したプログラムです。歴史的な資料として含めていますが、配布されたままでは動きません。</p>
+<ul><li>MM 2.32 の再現キット（Zenodo、DOI 10.5281/zenodo.22840735）と CAMB 2.0.4 が必要です。</li><li>パスは著者のコンピュータのものです。</li><li>プロトコルを、自身の隣にある <code>PROTOCOLLO_CT1.md</code> として読みます。ここではプロトコルは <code>records/PROTOCOL_CT1_astra.md</code> として配布しています。</li><li>そのファイルがないと、サンプルを書き出した後、要約を作る途中で停止します。</li><li>コードのコメントと出力されるラベルは、一部がイタリア語です。</li></ul>
+<p>すべてのファイルの SHA-256 指紋は <code>IMPRONTE.sha256</code> にあります。</p>
+<p><strong>イタリア語の要約。</strong> アーカイブされた本文の末尾には、七項目の <em>Sintesi in italiano</em>（イタリア語の要約）があります。その内容はすべて、このバージョンの各節にすでに含まれています。</p>
+<p><strong>このバージョン。</strong> この学生向け版は、英語のアーカイブされた本文をもとに AI アシスタント（Claude）の助けを借りて書かれました。まずイタリア語の全訳を作りました。次に、その翻訳を学校の生徒向けに書き直しました。数はプログラムでチェックしました。翻訳を英語の本文と、この版を翻訳と照らし合わせています。基準となるのはアーカイブされた本文です。</p>
+<p>この日本語版は、学生向け英語版を AI アシスタントの助けを借りて翻訳したものです。著者が読んで承認したのはイタリア語版です。</p>
+<h3>用語集</h3>
+<ul><li><strong>a0。</strong> 動径加速度関係の加速度スケールです。今日の値は約 1.2 × 10⁻¹⁰ m s⁻² です。</li><li><strong>加速度。</strong> 速度が一秒ごとに大きさまたは向きをどれだけ変えるかです。単位は m s⁻² です。</li><li><strong>バリオンのタリー–フィッシャー関係。</strong> 銀河の通常の物質の質量とその回転速度のつながりです。</li><li><strong>バリオン。</strong> 通常の物質です。星、ガス、惑星です。</li><li><strong>ビン。</strong> 距離が同程度の銀河のグループで、一つの値にまとめたものです。</li><li><strong>ブートストラップ。</strong> 不確かさを見積もる方法です。データを選び直しながら計算を何度も繰り返します。</li><li><strong>較正。</strong> 測定に合わせて調整した値です。予測ではありません。</li><li><strong>χ²（カイ二乗）。</strong> 誤差の点数です。法則がデータからどれだけ離れているかをまとめて表します。低いほど良い値です。</li><li><strong>CT1。</strong> モデルの始まりから動き出す時計による法則 a0 ∝ 1/t です。</li><li><strong>暗黒物質。</strong> バリオンでは説明のつかない余分な引力を生むものに与えられた名前です。</li><li><strong>深い領域とニュートン領域。</strong> 深い領域は、a0 よりずっと小さい加速度の領域です。ニュートン領域は、それよりずっと大きい加速度の領域で、ニュートンの法則が成り立ちます。</li><li><strong>縮退。</strong> 二つの異なる法則が同じ数を与え、データでは区別できない場合のことです。</li><li><strong>dex。</strong> 対数目盛での十倍の因子です。0.3 dex は二倍の因子です。</li><li><strong>デジタル化。</strong> 公表されたグラフから値を一点ずつ読み取ることです。</li><li><strong>有効半径（Re）。</strong> 銀河の光の半分を含む半径です。</li><li><strong>fDM(Re)。</strong> Re での円運動の速度の二乗のうち、バリオンでは説明のつかない割合です。</li><li><strong>当てはめ（フィット）。</strong> 式の値を、データにできるだけよく従うように選ぶ計算です。</li><li><strong>H、H0。</strong> 宇宙の膨張率です。H0 は今日の値、H(z) は過去の時代の値です。</li><li><strong>ハッブル半径。</strong> R_H = c/H：膨張が銀河を光の速さで運び去る距離です。</li><li><strong>ΛCDM。</strong> 一定の暗黒エネルギーと冷たい暗黒物質をもつ標準的な宇宙論です。</li><li><strong>MLS 法則。</strong> g_obs = g_bar/[1 − exp(−√(g_bar/a0))]：研究プログラムが使う動径加速度関係の形式です。</li><li><strong>事前分布。</strong> データに当てはめる前に、パラメータに与える出発点の値です。</li><li><strong>動径加速度関係。</strong> 観測された加速度と、通常の物質だけが与えるはずの加速度の、点ごとのつながりです。</li><li><strong>赤方偏移（z）。</strong> 旅のあいだに光がどれだけ引き伸ばされたかです。z が大きいほど、より過去を見ていることになります。</li><li><strong>回転曲線。</strong> 銀河の中心からの距離の関数として星とガスの速度を描いたグラフです。</li><li><strong>スケーリング関係。</strong> ガスのような量を銀河のほかの性質に結びつける平均的な式です。</li><li><strong>SED フィッティング。</strong> さまざまな色での銀河の光から星の質量を得る方法です。</li><li><strong>σ（シグマ）。</strong> 測定の典型的な誤差です。</li><li><strong>速度分散。</strong> 星とガスの速度が平均の運動のまわりにどれだけ散らばっているかです。</li><li><strong>ゼロ点。</strong> 傾きを固定したときの、タリー–フィッシャーの直線の高さです。専門的には、log V に対する log Mbar の切片です。</li></ul>
+<h3>参考文献</h3>
+<ul><li>M. Milgrom, A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis, ApJ 270, 365 (1983).</li><li>M. Milgrom, Cosmological variation of the MOND constant: secular effects on galactic systems, Phys. Rev. D 91, 044009 (2015), arXiv:1412.4344.</li><li>M. Milgrom, High-redshift rotation curves and MOND, arXiv:1703.06110 (2017).</li><li>E. Verlinde, Emergent gravity and the dark universe, SciPost Phys. 2, 016 (2017), arXiv:1611.02269.</li><li>S. McGaugh, F. Lelli and J. Schombert, Radial acceleration relation in rotationally supported galaxies, Phys. Rev. Lett. 117, 201101 (2016).</li><li>F. Lelli, S. McGaugh and J. Schombert, The small scatter of the baryonic Tully-Fisher relation, ApJ 816, L14 (2016).</li><li>F. Lelli, S. McGaugh and J. Schombert, SPARC: mass models for 175 disk galaxies with Spitzer photometry at 3.6 μm and accurate rotation curves, AJ 152, 157 (2016).</li><li>F. Lelli et al., The baryonic Tully-Fisher relation for different velocity definitions and implications for galaxy angular momentum, MNRAS 484, 3267 (2019).</li><li>R. Genzel et al., Strongly baryon-dominated disk galaxies at the peak of galaxy formation ten billion years ago, Nature 543, 397 (2017).</li><li>H. Übler et al., The evolution of the Tully-Fisher relation between z ~ 2.3 and z ~ 0.9 with KMOS3D, ApJ 842, 121 (2017), arXiv:1703.04321.</li><li>A. Nestor Shachar et al., RC100: rotation curves of 100 massive star-forming galaxies at z = 0.6-2.5, ApJ 944, 78 (2023), arXiv:2209.12199.</li><li>L. J. Tacconi et al., PHIBSS: unified scaling relations of gas depletion time and molecular gas fractions, ApJ 853, 179 (2018), arXiv:1702.01140.</li><li>L. J. Tacconi, R. Genzel and A. Sternberg, The evolution of the star-forming interstellar medium across cosmic time, ARA&amp;A 58, 157 (2020).</li><li>A. Chowdhury et al., H I 21-centimetre emission from an ensemble of galaxies at an average redshift of one, Nature 586, 369 (2020), arXiv:2010.06617.</li><li>A. Jeanneau, J. Richard, N. F. Bouché et al., MUSE-DARK-II: 3D morpho-kinematic modelling of lensed galaxies. Tully-Fisher relation of z ∼ 1 star-forming galaxies, A&amp;A 709, A120 (2026), arXiv:2603.28856.</li><li>B. I. Ciocan, N. F. Bouché, J. Fensch et al., MUSE-DARK III: the evolution of the radial acceleration relation at intermediate redshifts, A&amp;A 709, L16 (2026), arXiv:2604.22613.</li><li>G. T. Alcock, Is the acceleration scale of the radial acceleration relation tracking the cosmic expansion rate?, MNRAS 551 (2026), DOI 10.1093/mnras/stag1485, arXiv:2609.38796（表 1：MUSE-DARK III の図 3 から読み取った a0(z) のビンごとの値）。</li><li>U. Lanciano, Mathematical Materiality 2.32, Zenodo, DOI 10.5281/zenodo.22839525 (2026).</li></ul>
+</div>
+</main></body></html>
