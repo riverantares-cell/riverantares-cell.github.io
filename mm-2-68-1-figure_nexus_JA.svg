@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 488" role="img" aria-label="一つの数え上げが時間、空間、質量、対象を与える" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>一つの数え上げが時間、空間、質量、対象を与える</title>
+  <rect x="0" y="0" width="760" height="488" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8a8a85"/>
+    </marker>
+  </defs>
+  <text x="24" y="28" font-size="15" font-weight="600" fill="#1f1f1d">一つの数え上げが時間、空間、質量、対象を与える</text>
+  <g fill="none" stroke="#8a8a85" stroke-width="1.25">
+    <path d="M380 120V158" marker-end="url(#arrow)"/>
+    <path d="M290 232V256H190V278" marker-end="url(#arrow)"/>
+    <path d="M470 232V256H570V278" marker-end="url(#arrow)"/>
+    <path d="M190 352V390" marker-end="url(#arrow)"/>
+    <path d="M570 352V390" marker-end="url(#arrow)"/>
+    <path d="M344 322H416" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="200" y="48" width="360" height="72" rx="8" fill="#e3edfb" stroke="#2f6fd0" stroke-width="2"/>
+  <text x="380" y="72" text-anchor="middle" font-weight="600" fill="#1f1f1d">非局所的な連関</text>
+  <text x="380" y="92" text-anchor="middle" font-size="11.5" fill="#1f1f1d">空間は時間ではない。共通なのは GCD だけ</text>
+  <text x="380" y="108" text-anchor="middle" font-size="11.5" fill="#5f5f5a">1 だけを共有する 3 と 5 のように</text>
+  <text x="392" y="144" font-size="11.5" fill="#5f5f5a">GCD を通して数えられる</text>
+  <rect x="200" y="160" width="360" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="184" text-anchor="middle" font-weight="600" fill="#1f1f1d">観測者のマトリクス</text>
+  <text x="380" y="204" text-anchor="middle" font-size="11.5" fill="#1f1f1d">同じ GCD の倍数と分数</text>
+  <text x="380" y="220" text-anchor="middle" font-size="11.5" fill="#5f5f5a">その内側にいる観測者が読む</text>
+  <rect x="40" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="190" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">倍数</text>
+  <text x="190" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">読まれると：時計の時間</text>
+  <text x="190" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">含まれると：質量、不変</text>
+  <rect x="420" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="570" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">分数</text>
+  <text x="570" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">読まれると：空間と距離</text>
+  <text x="570" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">二つの読みに共通だと：対象</text>
+  <text x="380" y="312" text-anchor="middle" font-size="11.5" fill="#5f5f5a">c：レート</text>
+  <rect x="40" y="392" width="680" height="72" rx="8" fill="#f1f0ec" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="416" text-anchor="middle" font-weight="600" fill="#1f1f1d">質量の閾値より下では</text>
+  <text x="380" y="436" text-anchor="middle" font-size="11.5" fill="#1f1f1d">観測者の GCD と対象を生み出す GCD が等しくなり、</text>
+  <text x="380" y="452" text-anchor="middle" font-size="11.5" fill="#1f1f1d">対象はいくつもの位置に広がり、私たちはそれを確率として読む</text>
+</svg>

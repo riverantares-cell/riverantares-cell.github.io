@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 488" role="img" aria-label="Один подсчёт даёт время, пространство, массу и объекты" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>Один подсчёт даёт время, пространство, массу и объекты</title>
+  <rect x="0" y="0" width="760" height="488" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8a8a85"/>
+    </marker>
+  </defs>
+  <text x="24" y="28" font-size="15" font-weight="600" fill="#1f1f1d">Один подсчёт даёт время, пространство, массу и объекты</text>
+  <g fill="none" stroke="#8a8a85" stroke-width="1.25">
+    <path d="M380 120V158" marker-end="url(#arrow)"/>
+    <path d="M290 232V256H190V278" marker-end="url(#arrow)"/>
+    <path d="M470 232V256H570V278" marker-end="url(#arrow)"/>
+    <path d="M190 352V390" marker-end="url(#arrow)"/>
+    <path d="M570 352V390" marker-end="url(#arrow)"/>
+    <path d="M344 322H416" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="200" y="48" width="360" height="72" rx="8" fill="#e3edfb" stroke="#2f6fd0" stroke-width="2"/>
+  <text x="380" y="72" text-anchor="middle" font-weight="600" fill="#1f1f1d">Нелокальный нексус</text>
+  <text x="380" y="92" text-anchor="middle" font-size="11.5" fill="#1f1f1d">пространство — не время; общий у них только НОД</text>
+  <text x="380" y="108" text-anchor="middle" font-size="11.5" fill="#5f5f5a">как у 3 и 5, у которых общая только 1</text>
+  <text x="392" y="144" font-size="11.5" fill="#5f5f5a">отсчитывается через НОД</text>
+  <rect x="200" y="160" width="360" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="184" text-anchor="middle" font-weight="600" fill="#1f1f1d">Матрица наблюдателя</text>
+  <text x="380" y="204" text-anchor="middle" font-size="11.5" fill="#1f1f1d">кратные и дроби одного и того же НОД</text>
+  <text x="380" y="220" text-anchor="middle" font-size="11.5" fill="#5f5f5a">читаемые наблюдателем, находящимся внутри</text>
+  <rect x="40" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="190" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">Кратные</text>
+  <text x="190" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">прочитанные: время часов</text>
+  <text x="190" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">заключённые: масса, инвариант</text>
+  <rect x="420" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="570" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">Дроби</text>
+  <text x="570" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">прочитанные: пространство и расстояния</text>
+  <text x="570" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">общие для двух прочтений: объекты</text>
+  <text x="380" y="312" text-anchor="middle" font-size="11.5" fill="#5f5f5a">c: курс</text>
+  <rect x="40" y="392" width="680" height="72" rx="8" fill="#f1f0ec" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="416" text-anchor="middle" font-weight="600" fill="#1f1f1d">Ниже порога массы</text>
+  <text x="380" y="436" text-anchor="middle" font-size="11.5" fill="#1f1f1d">НОД наблюдателя и НОД, порождающий объект, становятся равными:</text>
+  <text x="380" y="452" text-anchor="middle" font-size="11.5" fill="#1f1f1d">объект распределяется по нескольким положениям, и мы читаем его как вероятность</text>
+</svg>

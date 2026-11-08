@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 488" role="img" aria-label="一次计数给出时间、空间、质量和物体" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>一次计数给出时间、空间、质量和物体</title>
+  <rect x="0" y="0" width="760" height="488" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8a8a85"/>
+    </marker>
+  </defs>
+  <text x="24" y="28" font-size="15" font-weight="600" fill="#1f1f1d">一次计数给出时间、空间、质量和物体</text>
+  <g fill="none" stroke="#8a8a85" stroke-width="1.25">
+    <path d="M380 120V158" marker-end="url(#arrow)"/>
+    <path d="M290 232V256H190V278" marker-end="url(#arrow)"/>
+    <path d="M470 232V256H570V278" marker-end="url(#arrow)"/>
+    <path d="M190 352V390" marker-end="url(#arrow)"/>
+    <path d="M570 352V390" marker-end="url(#arrow)"/>
+    <path d="M344 322H416" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="200" y="48" width="360" height="72" rx="8" fill="#e3edfb" stroke="#2f6fd0" stroke-width="2"/>
+  <text x="380" y="72" text-anchor="middle" font-weight="600" fill="#1f1f1d">非定域联结</text>
+  <text x="380" y="92" text-anchor="middle" font-size="11.5" fill="#1f1f1d">空间不是时间；共同的只有 GCD</text>
+  <text x="380" y="108" text-anchor="middle" font-size="11.5" fill="#5f5f5a">就像 3 和 5，共同的只有 1</text>
+  <text x="392" y="144" font-size="11.5" fill="#5f5f5a">通过 GCD 计数</text>
+  <rect x="200" y="160" width="360" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="184" text-anchor="middle" font-weight="600" fill="#1f1f1d">观测者的矩阵</text>
+  <text x="380" y="204" text-anchor="middle" font-size="11.5" fill="#1f1f1d">同一个 GCD 的倍数和分数</text>
+  <text x="380" y="220" text-anchor="middle" font-size="11.5" fill="#5f5f5a">由身处其中的观测者读出</text>
+  <rect x="40" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="190" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">倍数</text>
+  <text x="190" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">读出：时钟的时间</text>
+  <text x="190" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">被包含：质量，不变量</text>
+  <rect x="420" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="570" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">分数</text>
+  <text x="570" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">读出：空间和距离</text>
+  <text x="570" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">两个解读所共有：物体</text>
+  <text x="380" y="312" text-anchor="middle" font-size="11.5" fill="#5f5f5a">c：兑换率</text>
+  <rect x="40" y="392" width="680" height="72" rx="8" fill="#f1f0ec" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="416" text-anchor="middle" font-weight="600" fill="#1f1f1d">低于某个质量阈值</text>
+  <text x="380" y="436" text-anchor="middle" font-size="11.5" fill="#1f1f1d">观测者的 GCD 与生成物体的 GCD 变得相等：</text>
+  <text x="380" y="452" text-anchor="middle" font-size="11.5" fill="#1f1f1d">物体铺展在多个位置上，我们把它读作概率</text>
+</svg>

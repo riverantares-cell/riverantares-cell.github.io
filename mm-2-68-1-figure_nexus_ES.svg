@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 488" role="img" aria-label="Un solo recuento da tiempo, espacio, masa y objetos" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>Un solo recuento da tiempo, espacio, masa y objetos</title>
+  <rect x="0" y="0" width="760" height="488" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8a8a85"/>
+    </marker>
+  </defs>
+  <text x="24" y="28" font-size="15" font-weight="600" fill="#1f1f1d">Un solo recuento da tiempo, espacio, masa y objetos</text>
+  <g fill="none" stroke="#8a8a85" stroke-width="1.25">
+    <path d="M380 120V158" marker-end="url(#arrow)"/>
+    <path d="M290 232V256H190V278" marker-end="url(#arrow)"/>
+    <path d="M470 232V256H570V278" marker-end="url(#arrow)"/>
+    <path d="M190 352V390" marker-end="url(#arrow)"/>
+    <path d="M570 352V390" marker-end="url(#arrow)"/>
+    <path d="M344 322H416" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="200" y="48" width="360" height="72" rx="8" fill="#e3edfb" stroke="#2f6fd0" stroke-width="2"/>
+  <text x="380" y="72" text-anchor="middle" font-weight="600" fill="#1f1f1d">Nexo no local</text>
+  <text x="380" y="92" text-anchor="middle" font-size="11.5" fill="#1f1f1d">el espacio no es el tiempo; en común solo el MCD</text>
+  <text x="380" y="108" text-anchor="middle" font-size="11.5" fill="#5f5f5a">como 3 y 5, que solo comparten el 1</text>
+  <text x="392" y="144" font-size="11.5" fill="#5f5f5a">contado a través del MCD</text>
+  <rect x="200" y="160" width="360" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="184" text-anchor="middle" font-weight="600" fill="#1f1f1d">La matriz del observador</text>
+  <text x="380" y="204" text-anchor="middle" font-size="11.5" fill="#1f1f1d">múltiplos y fracciones del mismo MCD</text>
+  <text x="380" y="220" text-anchor="middle" font-size="11.5" fill="#5f5f5a">leídos por un observador que está dentro</text>
+  <rect x="40" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="190" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">Múltiplos</text>
+  <text x="190" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">leídos: el tiempo de los relojes</text>
+  <text x="190" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">contenidos: la masa, invariante</text>
+  <rect x="420" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="570" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">Fracciones</text>
+  <text x="570" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">leídas: el espacio y las distancias</text>
+  <text x="570" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">comunes a dos lecturas: los objetos</text>
+  <text x="380" y="312" text-anchor="middle" font-size="11.5" fill="#5f5f5a"><tspan x="380" dy="-14">c: tipo</tspan><tspan x="380" dy="14">de cambio</tspan></text>
+  <rect x="40" y="392" width="680" height="72" rx="8" fill="#f1f0ec" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="416" text-anchor="middle" font-weight="600" fill="#1f1f1d">Por debajo de un umbral de masa</text>
+  <text x="380" y="436" text-anchor="middle" font-size="11.5" fill="#1f1f1d">el MCD del observador y el MCD que genera el objeto se igualan:</text>
+  <text x="380" y="452" text-anchor="middle" font-size="11.5" fill="#1f1f1d">el objeto se extiende sobre varias posiciones y lo leemos como probabilidad</text>
+</svg>

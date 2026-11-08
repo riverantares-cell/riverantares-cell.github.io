@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 488" role="img" aria-label="Eine einzige Zählung ergibt Zeit, Raum, Masse und Objekte" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>Eine einzige Zählung ergibt Zeit, Raum, Masse und Objekte</title>
+  <rect x="0" y="0" width="760" height="488" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8a8a85"/>
+    </marker>
+  </defs>
+  <text x="24" y="28" font-size="15" font-weight="600" fill="#1f1f1d">Eine einzige Zählung ergibt Zeit, Raum, Masse und Objekte</text>
+  <g fill="none" stroke="#8a8a85" stroke-width="1.25">
+    <path d="M380 120V158" marker-end="url(#arrow)"/>
+    <path d="M290 232V256H190V278" marker-end="url(#arrow)"/>
+    <path d="M470 232V256H570V278" marker-end="url(#arrow)"/>
+    <path d="M190 352V390" marker-end="url(#arrow)"/>
+    <path d="M570 352V390" marker-end="url(#arrow)"/>
+    <path d="M344 322H416" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="200" y="48" width="360" height="72" rx="8" fill="#e3edfb" stroke="#2f6fd0" stroke-width="2"/>
+  <text x="380" y="72" text-anchor="middle" font-weight="600" fill="#1f1f1d">Nichtlokaler Nexus</text>
+  <text x="380" y="92" text-anchor="middle" font-size="11.5" fill="#1f1f1d">der Raum ist nicht die Zeit; gemeinsam nur der ggT</text>
+  <text x="380" y="108" text-anchor="middle" font-size="11.5" fill="#5f5f5a">wie 3 und 5, die nur die 1 teilen</text>
+  <text x="392" y="144" font-size="11.5" fill="#5f5f5a">über den ggT gezählt</text>
+  <rect x="200" y="160" width="360" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="184" text-anchor="middle" font-weight="600" fill="#1f1f1d">Die Matrix des Beobachters</text>
+  <text x="380" y="204" text-anchor="middle" font-size="11.5" fill="#1f1f1d">Vielfache und Bruchteile desselben ggT</text>
+  <text x="380" y="220" text-anchor="middle" font-size="11.5" fill="#5f5f5a">gelesen von einem Beobachter in ihr</text>
+  <rect x="40" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="190" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">Vielfache</text>
+  <text x="190" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">gelesen: die Zeit der Uhren</text>
+  <text x="190" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">enthalten: Masse, invariant</text>
+  <rect x="420" y="280" width="300" height="72" rx="8" fill="none" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="570" y="304" text-anchor="middle" font-weight="600" fill="#1f1f1d">Bruchteile</text>
+  <text x="570" y="324" text-anchor="middle" font-size="11.5" fill="#1f1f1d">gelesen: Raum und Abstände</text>
+  <text x="570" y="340" text-anchor="middle" font-size="11.5" fill="#1f1f1d">zwei Lesarten gemeinsam: Objekte</text>
+  <text x="380" y="312" text-anchor="middle" font-size="11.5" fill="#5f5f5a">c: der Kurs</text>
+  <rect x="40" y="392" width="680" height="72" rx="8" fill="#f1f0ec" stroke="#8a8a85" stroke-width="1.25"/>
+  <text x="380" y="416" text-anchor="middle" font-weight="600" fill="#1f1f1d">Unterhalb einer Massenschwelle</text>
+  <text x="380" y="436" text-anchor="middle" font-size="11.5" fill="#1f1f1d">der ggT des Beobachters und der ggT, der das Objekt erzeugt, werden gleich:</text>
+  <text x="380" y="452" text-anchor="middle" font-size="11.5" fill="#1f1f1d">das Objekt verteilt sich über mehrere Positionen, und wir lesen es als Wahrscheinlichkeit</text>
+</svg>
