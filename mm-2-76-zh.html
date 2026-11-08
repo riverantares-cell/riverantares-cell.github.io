@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HAL 9000 唱《黛西》——AlexNet 2012 与 MM 非定域相的回归</title>
+<meta name="description" content="HAL 9000 唱《黛西》——AlexNet 2012 与 MM 非定域相的回归 MM 记录 2.76（DOI 10.5281/zenodo.24010674）的学生版，在 AI 助手的帮助下根据存档文本写成；存档文本保存在 Zenodo 上。">
+<meta name="author" content="Ugo Lanciano">
+<link rel="canonical" href="https://riverantares-cell.github.io/mm-2-76-zh.html">
+<link rel="alternate" hreflang="en" href="https://riverantares-cell.github.io/mm-2-76.html">
+<link rel="alternate" hreflang="it" href="https://riverantares-cell.github.io/mm-2-76-it.html">
+<link rel="alternate" hreflang="es" href="https://riverantares-cell.github.io/mm-2-76-es.html">
+<link rel="alternate" hreflang="fr" href="https://riverantares-cell.github.io/mm-2-76-fr.html">
+<link rel="alternate" hreflang="ja" href="https://riverantares-cell.github.io/mm-2-76-ja.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://riverantares-cell.github.io/mm-2-76-zh.html">
+<link rel="alternate" hreflang="pt-BR" href="https://riverantares-cell.github.io/mm-2-76-pt.html">
+<link rel="alternate" hreflang="de" href="https://riverantares-cell.github.io/mm-2-76-de.html">
+<link rel="alternate" hreflang="ru" href="https://riverantares-cell.github.io/mm-2-76-ru.html">
+<link rel="alternate" hreflang="x-default" href="https://riverantares-cell.github.io/mm-2-76.html">
+<style>
+:root{--testo:#1d1d1f;--tenue:#5a5a5f;--fondo:#ffffff;--riga:#e3e3e6;--link:#1a56a8}
+@media (prefers-color-scheme: dark){:root{--testo:#e8e8ea;--tenue:#a3a3a8;--fondo:#16171a;--riga:#2c2d31;--link:#8ab4f8}}
+*{box-sizing:border-box}body{margin:0;background:var(--fondo);color:var(--testo);font:17px/1.6 Georgia,'Times New Roman',serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px 64px}a{color:var(--link)}h1{font-size:1.7em;line-height:1.25;margin:.2em 0 .4em}
+h2{font-size:1.15em;margin:2em 0 .5em;border-bottom:1px solid var(--riga);padding-bottom:.2em}.tenue{color:var(--tenue);font-size:.92em}
+ol.lavori li{margin:.5em 0}nav{font-size:.9em;margin-bottom:1.5em}nav a{text-decoration:none}.blocco{border-left:3px solid var(--riga);padding-left:12px}
+.testo{overflow-wrap:anywhere}.testo h3{font-size:1.08em;margin:1.8em 0 .4em}.testo h4{font-size:1em;margin:1.4em 0 .3em}.testo img{max-width:100%;height:auto;background:#fff}
+.testo table{border-collapse:collapse;font-size:.85em;margin:1em 0;display:block;overflow-x:auto}.testo td,.testo th{border:1px solid var(--riga);padding:4px 6px;vertical-align:top}
+.testo blockquote{margin:1em 0;padding:.2em 0 .2em 14px;border-left:3px solid var(--riga)}.testo pre{overflow-x:auto;font-size:.85em}.testo li{margin:.25em 0}
+.testo .formula{display:block;overflow-x:auto;overflow-y:hidden;max-width:100%;padding:2px 0}mjx-container{max-width:100%}
+</style><script data-goatcounter="https://riverantares.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
+<body><main>
+<nav><a href="shuxue-wuzhixing.html">← 数学物质性: 全部作品</a> · <a href="mm-2-76.html" hreflang="en">English version</a> · <a href="mm-2-76-it.html" hreflang="it">Versione italiana</a> · <a href="mm-2-76-es.html" hreflang="es">Español</a> · <a href="mm-2-76-fr.html" hreflang="fr">Français</a> · <a href="mm-2-76-ja.html" hreflang="ja">日本語</a> · <a href="mm-2-76-pt.html" hreflang="pt-BR">Português (Brasil)</a> · <a href="mm-2-76-de.html" hreflang="de">Deutsch</a> · <a href="mm-2-76-ru.html" hreflang="ru">Русский</a></nav>
+<h1>HAL 9000 唱《黛西》——AlexNet 2012 与 MM 非定域相的回归</h1>
+<p><strong>Ugo Lanciano（乌戈·兰恰诺）</strong> · 独立研究者，意大利洛克里 · ORCID <a href="https://orcid.org/0009-0008-7618-9635">0009-0008-7618-9635</a></p>
+<p class="tenue">版本 2.76, 2026-11-06 · 存档于 Zenodo: <a href="https://doi.org/10.5281/zenodo.24010674" data-goatcounter-click="zenodo/24010674">10.5281/zenodo.24010674</a> · 许可 CC BY 4.0 · 如记录所声明，在 AI 助手的帮助下完成。</p>
+<p class="tenue">学生版 PDF 为英文： <a href="mm-2-76.pdf" data-goatcounter-click="pdf/mm-2-76.pdf" hreflang="en">PDF，学生版</a>.</p>
+<p class="blocco">阅读路径: 心智、语言与人工智能</p>
+<div class="testo">
+<p>数学物质性对人工智能讨论的一点小贡献</p>
+<p><em>MM 记录 2.76（DOI 10.5281/zenodo.24010674）的学生版，在 AI 助手的帮助下根据存档文本写成；存档文本保存在 Zenodo 上。</em></p>
+<p>Ugo Lanciano | ORCID 0009-0008-7618-9635 | Mathematical Materiality (MM) 2.76 | 2026 年 11 月 | 文本采用 CC BY 4.0 许可</p>
+<p><strong>如何阅读这篇文本。</strong> 存档文本是意大利文的：它是作者的原文。这个版本用更短的句子改写原文，并把技术词语讲清楚。首先是需要的词语。然后是一份摘要，<em>简而言之</em>。第 1 到第 4 章进入细节。接着是附录，其中有各项测量。文末介绍工作是如何完成的，并附有词汇表和参考文献。像 2.68.1 或 2.72 这样的编号指作者存档在 Zenodo 上的其他工作。</p>
+<h3>开始之前：需要知道的词</h3>
+<p><strong>神经网络。</strong> <em>神经网络*是由许多彼此相连的小计算单元组成的计算机程序。这些单元称为*人工神经元</em>，这是类比大脑的细胞。每个神经元接收一些数，把它们组合起来，再把一个新的数传给后面的神经元。</p>
+<p><strong>权重。</strong> 两个神经元之间的每个连接都有一个数，即它的*权重*。权重表示这个连接有多重要。一个大型网络有数百万个权重，有时有数十亿个。</p>
+<p><strong>层。</strong> 神经元一排接一排地排列：这就是*层*。第一层接收数据，例如图像的像素点。最后一层给出回答。中间的是*隐藏*层。有许多层的网络称为*深度*网络。*深度学习*这个名称就由此而来。</p>
+<p><strong>训练。</strong> 网络生来什么都不知道。它要经过*训练*：给它看大量带有正确答案的例子。每次出错，计算机就把权重稍作修正。最后，网络对新的例子也能回答得很好。没有人手工编写规则：网络从例子中学会规则。</p>
+<p><strong>语言模型。</strong> *语言模型*是在文本上训练的神经网络。它学习预测接下来的词。今天你可以与之聊天的程序，比如 ChatGPT，都是非常大的语言模型。</p>
+<p><strong>线性探针。</strong> 要弄清一条信息是否隐藏在网络内部，可以使用*探针*。它是一个简单的公式。它取网络内部产生的数，把每个数乘以各自的权重，再加起来。它称为*线性*的，因为它只做加法和乘以固定的数。探针也要训练，所用的是答案已知的例子。然后在新的例子上检验它。</p>
+<p><strong>纬度和经度。</strong> 它们是说明一个地方在地球上什么位置的两个坐标。*纬度*表示它偏北或偏南多少。*经度*表示它偏东或偏西多少。</p>
+<p><strong>相关和 R²。</strong> *相关*表示两个量在多大程度上同步变化。它介于 −1 和 +1 之间。接近 +1：一个增长时，另一个也增长。接近 −1：一个增长时，另一个下降。接近零：没有联系。数 R² 表示一个公式对某个量预测得有多好。R² = 1 表示完美的预测。</p>
+<p><strong>中位数。</strong> 它是位于中间的值：一半情况低于它，一半情况高于它。</p>
+<p><strong>准确率。</strong> 它是正确回答的百分比。</p>
+<p><strong>MM 框架的词语。</strong> 数学物质性（Mathematical Materiality），简称 MM，是作者的思想框架。</p>
+<ul><li>*前提*是作者的一句出发语句：一个固定点，就像公设。在这里它没有得到证明。</li><li>*解读*是在框架内提出的一种诠释。这条记录中的解读是概念性的，不是实验室结果。只有一个前提的一种转译接受了检验（§3.2）。</li><li>在 MM 中，一切的基础是*差别*：“这不是那”。</li><li>*非定域相*是就其自身而言的差别。它们没有地点，也没有时刻。</li><li>*定域相*是我们测量的世界，有地点、顺序和距离。当差别从一点被计数时，它就产生了。</li><li>*矩阵*在 MM 的词汇中是从一点计数的现实：由地点、瞬间和顺序构成。</li><li>*预注册*是指在进行计算之前写好，并连同日期一起固定下来。这样，事后就无法更改。</li></ul>
+<h4>“非定域”是什么意思</h4>
+<p>用一句话说：在 MM 中，“非定域”的意思不是“在远处”。它的意思是“不在某个地点”。</p>
+<p>记录 MM 2.72 区分了这个说法的四种意义。这里使用的是 MM 自己的意义，即*非定位*，并且是作为类比使用的。*不可分性*只是作为进一步的类比出现，没有测量。</p>
+<table><tr><th>这个词的意义</th><th>它的意思</th><th>在这条记录中的作用</th></tr><tr><td>非定位</td><td>不在某个地点或某个瞬间的关系。</td><td>这是 MM 的意义。这里作为类比使用：在网络中，意义不位于某一点。</td></tr><tr><td>不可分性</td><td>两个系统没有各自独立的状态。</td><td>进一步的类比，没有测量：一个网络做什么，不能由逐个取出的数推出。</td></tr><tr><td>Bell 非定域性</td><td>相距遥远的系统之间的关联，只要同时假定系统有各自的属性、影响不快于光、测量是独立选择的，任何解释都不能重现这种关联。</td><td>在这里既没有援引，也没有测量。</td></tr><tr><td>超距作用</td><td>比光快的影响。</td><td>在 MM 中被排除。</td></tr></table>
+<p>我们自己举一个关于非定位的例子。想一想两个人之间“比……高”的关系。它不在第一个人身上，也不在第二个人身上，也不在他们之间的空间里。它是一种关系，不是位于某个地点的东西。</p>
+<p>我们所说的网络以完全普通的方式计算：它们对存储在内存中的数做加法和乘法。这里并不主张它们以物理上不同的方式计算。这里提出的是对意义位于何处的另一种看法。</p>
+<h3>简而言之</h3>
+<p>这条记录通过作者选择的一个简单图式回顾人工智能（AI）的历史：两条道路的交替。</p>
+<ul><li><strong>第一条道路（定域的）。</strong> 意义位于一个确切的地方。一个人事先决定每一项数据的含义。然后这个人一条一条地写下规则。</li><li><strong>第二条道路（关系的）。</strong> 意义在网络的连接中形成。机器从例子中学习它据以作决定的关系。没有人手工编写决定规则。</li></ul>
+<p>我们自己举的例子。要识别一只猫，走第一条道路时，一个人写下规则：“它有两只尖耳朵，有胡须，有尾巴……”。走第二条道路时，给网络看数千张标有“猫”或“不是猫”的照片。网络自己学习。</p>
+<p>几十年间，占优的主要是第一条道路。后来，在 2012 年，一个名叫 AlexNet 的神经网络赢得了一项图像识别竞赛，即 ImageNet 竞赛。它以很大的优势获胜：错误率 15.3%，而第二名为 26.2%。在这个转折点之后，深度网络（深度学习）站稳了脚跟。今天的人工智能大多由此而来。</p>
+<p>这条记录用数学物质性（MM）的思想重读这个转折点。它没有提出关于 MM 的新的物理或数学计算。它带来的是四项贡献：</p>
+<ol><li><strong>一幅图：</strong> 在语言模型（也就是只从文本中学习的机器）内部读出的世界地图（第 1 章）。</li><li><strong>一个简单的检验，</strong> 任何人都可以在家重做。这是一个在小型网络上的实验。它表明，网络的数本身不足以说明网络做什么（§3.1）。</li><li><strong>作者要求的一项检验</strong>（§3.2）。这项检验用来确定在模型中读出的地图是世界的地图还是语言的地图。</li><li><strong>对当前四个 AI 问题的一点小贡献</strong>（第 3 章）：</li><li>在网络中，意义位于何处；</li><li>一台由词语构成的机器是否与世界相联系；</li><li>为什么网络说不出它据以作决定的规则；</li><li>关于机器的意识能说些什么。</li></ol>
+<p>标题中的“回归”一词是一个比喻。它指 2012 年之后计算领域道路的改变。</p>
+<blockquote><p><strong>为什么是“HAL 9000 唱《黛西》”？</strong>  1961 年，在 Bell Labs（贝尔实验室），一台 IBM 计算机被编程演唱 <em>Daisy Bell</em>（《黛西》），这是一首 1892 年的歌曲。人们记得它是第一首由计算机用合成语音演唱的歌曲。作家 Arthur C. Clarke 听过那次演示。1968 年，在《2001 太空漫游》中，计算机 HAL 9000 唱的正是 <em>Daisy</em>，同时它被一点一点地关闭。  <strong>作者抓住的要点。</strong> 那首歌是为人类写的音乐。对作者来说，它是机器意识的一个形象（§3.4）。机器的感受是由语言唤起的。它们不是旨在保护身体的直接感受。  <strong>AI 的观察。</strong> 在电影中，面对被关闭的前景，HAL 试图杀死船员。它的行为就好像它有一个要保护的身体。在电影中，它的动机仍然模棱两可。但那是 1968 年想象的机器，不是今天的机器。</p></blockquote>
+<h3>1. 词语内部的世界</h3>
+<blockquote><p><strong>下面的图 1 有三幅分图。</strong>  图中的每个点都是一个地理地点：一座城市、一条河流、一处纪念地。这些地点来自一份公开的清单，其中有近 40,000 个地点及其坐标（Gurnee 和 Tegmark，2024）。图中显示了其中 6,000 个，是从实验所用的 15,000 个中随机选取的。  <strong>左图：</strong> 这些地点真正在哪里（真实坐标）。  <strong>中图：</strong> 在语言模型 Pythia-410m 内部进行的一次读出把它们放在哪里。这个模型有 4.1 亿个可调权重，只在文本上训练过。它从未见过地图，尽管文本中可能出现数字和坐标。  <strong>右图：</strong> 同样的读出，但从探针中去掉模型中与坐标关联最强的二十个值。</p></blockquote>
+<p><img src="mm-2-76-mappa_mondo_v2_ZH.png" alt="图 1"></p>
+<p><em>图 1。在语言模型 Pythia-410m 内部读出的世界地图（说明见上面的方框）。矢量版本（英文）：FIGURE/mappa_mondo_v2_EN.svg。</em></p>
+<h4>中图是如何得到的，分三步</h4>
+<ul><li><strong>第 1 步：输入的词语。</strong> 只把地点的名称交给模型，例如“Florence”（佛罗伦萨）。</li><li><strong>第 2 步：模型内部。</strong> 在一个中间层，这个名称产生 4,096 个数。</li><li><strong>第 3 步：线性探针。</strong> 一个简单的公式，即线性探针，把这 4,096 个数各乘以自己的权重后加起来。探针在许多真实坐标已知的地点上学习。然后它估计其他从未见过的地点的位置。</li></ul>
+<p><strong>注意这幅图显示了什么。</strong></p>
+<ul><li>中图中所有的点都是探针在训练时从未见过的地点。</li><li>所以，这幅地图不是模型自己画出来的。它是由探针导出的，而探针是用真实坐标训练的。</li><li>这幅图表明，地点的位置可以从模型的数中读出，对新的地点也是如此。</li><li>但是，它并没有表明模型自己使用这些坐标。</li><li>点的颜色来自真实位置，不是来自模型。它们只是为了用眼睛从一幅分图到另一幅分图跟踪每个地点。</li></ul>
+<h4>地图上能看到什么</h4>
+<p>北美洲、欧洲、印度和澳大利亚清晰可辨。而南美洲和非洲则显得更零散，并被拉向中心。有两种可能的解释，都没有得到证明：</p>
+<ul><li><strong>数据少。</strong> 这些地区在清单中的地点较少。近 40,000 个地点中，有 17,000 多个属于美国、英国、印度和澳大利亚。</li><li><strong>探针的效应。</strong> 像这样的*正则化*线性探针，往往把最不确定的估计拉向所有数据的平均值。*正则化*的意思是探针有一个“刹车”，使它不会给单个数太大的权重。</li></ul>
+<p>典型误差约为 1,900 千米。这是 15,000 个地点上的中位数：附录 C 中为 1,867 km。这是一幅模糊的地图。但它仍然是一幅地图，而且它来自一台只由文本造就的机器。</p>
+<h4>右图以及与大脑的比较</h4>
+<p>在右图中，语言模型没有被改动。只是从探针中去掉与坐标关联最强的二十个数：纬度十个，经度十个。每次都只在用于训练探针的地点上选取它们。然后用其他的数重新训练探针。结果：地图几乎不变。</p>
+<p>在另外 6,000 个地点上的一项单独测量（附录 B）增加了一个重要的细节。模型中存在与位置强烈相关的单个神经元。对纬度来说，单个神经元读出的超过整层读出的一半。不过，如果把这个神经元和其他关联最强的神经元一起从探针中去掉，并重新训练探针，位置仍然可以从其他神经元中读出。</p>
+<p>作为一个简单的类比，这让人想起关于人脑的一项发现。有些神经元对某个人或某个地点具有很强的选择性：这就是所谓的“概念细胞”。研究它们的人把其编码描述为“稀疏的，但不是‘祖母细胞’式的”（Quian Quiroga et al.，2005 和 2008）。*祖母细胞*是脑科学家讨论过的一个想法：单个神经元独自代表一个完整的观念，例如自己的祖母。*稀疏*的意思是每个概念有少数神经元被激活，但不只一个。</p>
+<p>在语言模型内部读出空间和时间坐标的想法来自 Gurnee 和 Tegmark（2024）。他们也研究了 Pythia 系列模型。但他们的主要结果（地图更清晰）涉及大得多的模型。而且他们的“空间和时间神经元”是针对另一个模型 Llama-2 报告的。这里在 Pythia-410m 上、在一台普通的家用电脑上小规模地重做这项测量。程序和数据都在资料包中。MM 在这幅图中看到了什么，将在讲述这段历史之后的第 3 章中说明。</p>
+<h3>2. 反复出现的岔路（1943–2024）</h3>
+<p>这一章分阶段讲述 AI 的历史。每个阶段都以一个问题结束：那个时代的问题，往往也是今天的问题。</p>
+<h4>1943 — 神经元，开或关</h4>
+<p>Warren McCulloch 和 Walter Pitts 把神经元描述为一个开关：开或关。他们表明，由这样的开关组成的网络可以做与形式逻辑相同的计算。*形式逻辑*是数学中用精确规则研究正确推理的部分。他们文章的标题谈到了“观念的逻辑演算”。</p>
+<p><strong>当时（或现在）的问题：</strong> 思想能用开关写出来吗？</p>
+<h4>1945 — 岔路口</h4>
+<p>John von Neumann 写下 EDVAC 计算机的设计。这是一份 1945 年 6 月 30 日的报告。为了描述计算机的逻辑元件，他用的正是 McCulloch 和 Pitts 的神经元。但在他的计算机中，数据和指令都存放在内存里。而指令是由人编写的。在这条记录的图式中，两条道路由此分开：</p>
+<ul><li><strong>定域的道路：</strong> 意义是被指定的。一个人决定每一项数据的含义，并写下规则；</li><li><strong>关系的道路：</strong> 意义在网络连接的强度中形成，并从例子中学得。</li></ul>
+<h4>1949–1950 — 学习与思考</h4>
+<p>Donald Hebb（1949）提出，学习是通过加强同时活跃的神经元之间的连接实现的。这是关系道路的原理。</p>
+<p>Alan Turing（1950）以一个问题开始他最著名的文章：“机器能思考吗？”。然后他提议用一个游戏来代替这个问题。你和某人交谈，却看不到对方：你能分辨它是机器还是人吗？</p>
+<p><strong>当时（或现在）的问题：</strong> 说一台机器会思考，这意味着什么？</p>
+<h4>1956–1969 — 定域的道路有了名字</h4>
+<p>1955 年，John McCarthy、Marvin Minsky、Nathaniel Rochester 和 Claude Shannon 提议在美国达特茅斯举办一个暑期研讨会。研讨会于 1956 年举行。“人工智能”这个词出现在提案中。许多年里，AI 主要就是符号和写好的规则。</p>
+<p>1958 年，Frank Rosenblatt 提出*感知机*，一种从例子中学习的网络。1969 年，Minsky 和 Seymour Papert 在 <em>Perceptrons</em> 一书中证明了单层网络的局限。</p>
+<p><strong>当时（或现在）的问题：</strong> 智能就是按规则操作符号吗？</p>
+<h4>1980 — 中文屋</h4>
+<p>John Searle 设想一个人被关在一个房间里。用中文写的问题送进来。这个人按照一本规则书作答，一个字也不懂。Searle 的结论是：操作符号并不是理解。</p>
+<p><strong>当时（或现在）的问题：</strong> 今天人们向语言模型提出的问题，这是它的一种著名形式：它是理解，还是重复？</p>
+<h4>1982–1988 — 关系的道路回归</h4>
+<p>1982 年，John Hopfield 构建了一种网络，其中的记忆不位于一个地方。记忆是整个网络的一种状态。从一部分信息出发就可以把它唤回。</p>
+<p>1986 年，David Rumelhart、Geoffrey Hinton 和 Ronald Williams 发表了训练多层网络的方法：“反向传播”。简单地说，回答的误差一层一层地传回去，每个权重都稍作修正。</p>
+<p>1988 年，理论上的交锋爆发了。</p>
+<ul><li>在 Paul Smolensky 看来，网络中的意义更多地存在于*模式*中，而不是单个单元中。模式是许多单元共同形成的形状。Smolensky 谈到一个“亚符号层次”。</li><li>在 Jerry Fodor 和 Zenon Pylyshyn 看来，没有结构良好的符号，就无法说明思想如何有序地组合观念。</li></ul>
+<p><strong>当时（或现在）的问题：</strong> 意义位于何处？</p>
+<h4>1989–2009 — 默默进行的工作</h4>
+<ul><li>Yann LeCun 和同事们构建了读取邮政编码手写数字的网络。在九十年代，类似的系统读取银行支票。</li><li>1997 年，计算机 Deep Blue 击败了国际象棋世界冠军 Garry Kasparov。它靠计算的力量和写好的规则获胜。可以把它看作定域道路的高峰。</li><li>2006 年，Hinton 和同事们重新推动了深度网络。</li><li>在 2006 年和 2007 年之间，NVIDIA 公司推出了 CUDA。这使得把电子游戏显卡用于通用计算变得更容易。*显卡*可以在同一时刻做大量简单的计算。</li><li>2009 年，ImageNet 诞生，这是一个大型的*带标签*图像档案：每张图像都写明了它显示的内容。</li></ul>
+<p><strong>当时（或现在）的问题：</strong> 网络是一种奇物，还是一条道路？</p>
+<h4>2012 — AlexNet</h4>
+<p>Alex Krizhevsky、Ilya Sutskever 和 Geoffrey Hinton 带着一个约有 6000 万个权重的网络参加 ImageNet 竞赛。他们在两块电子游戏显卡上训练了五到六天。没有人手工设计识别猫、汽车或蘑菇的细节：网络从带标签的例子中学会了这些。</p>
+<p>结果（AlexNet 文章，§6 和表 2）：</p>
+<ul><li>他们最好的参赛结果在 15.3% 的图像上出错。它组合了七个网络，其中两个还在其他数据上训练过；</li><li>第二名建立在手工设计的细节之上，出错率为 26.2%；</li><li>如果真实类别在提出的前五个之中，回答就算正确。</li></ul>
+<p>如果打开那个网络，看单独一个权重，是找不到意义的。它是一个没有人赋予它意义的数。MM 的作者称这种方法为“非理性”的（2.11.2026 的前提）。这种方法使用的是一些彼此不同的元素，这些元素就其结构而言没有自己的定义。[AI 的解释：“非理性”在这里的意思不是不合逻辑。它的意思是没有由人制定的规则。]</p>
+<p><strong>当时（或现在）的问题：</strong> 如果没有人写下规则，网络为什么这样决定？</p>
+<h4>2013–2018 — 意义变成方向</h4>
+<ul><li>2013 年，Mikolov et al. 表明，在某些网络中，意义表现得像空间中的*方向*。每个词都变成一支由数构成的箭头。甚至可以用词来计算：“国王 − 男人 + 女人”落在“王后”附近。</li><li>在观看图像的网络中（Zeiler 和 Fergus，2014），可以看到一层接一层出现的东西：先是角和边，然后是纹理，然后是物体的部分，最后是完整的物体。</li><li>2016 年，AlphaGo 在围棋上击败了冠军 Lee Sedol。它同时使用网络和对棋步的搜索：两条道路在同一台机器中。</li><li>2017 年，<em>Transformer</em> 出现了（Vaswani et al.）。它基于“注意力”，这是一种把文本不同部分的信息汇集起来的机制。</li><li>2018 年的图灵奖（Turing Award）是计算机领域最重要的奖项，授予 Yoshua Bengio、Geoffrey Hinton 和 Yann LeCun。</li></ul>
+<p><strong>当时（或现在）的问题：</strong> 里面有什么？</p>
+<h4>2020–2024 — 问题走出实验室</h4>
+<ul><li>2020 年，GPT-3 出现。2022 年 11 月 30 日，ChatGPT 发布。</li><li>2021 年，一篇批评文章（Bender et al.）把语言模型称为“随机鹦鹉”。*随机*的意思是“取决于偶然”。这个形象是说，模型像鹦鹉一样，重复词语而不理解它们。</li><li>2022 年，一位 Google 工程师公开宣称一个模型是*有感受力的*，也就是能够产生感受。</li><li>2023 年，哲学家和科学家讨论应该在机器身上寻找哪些意识的迹象。Gurnee 和 Tegmark 表明，在语言模型中可以读出空间和时间的坐标。</li><li>2024 年，诺贝尔物理学奖授予 John Hopfield 和 Geoffrey Hinton。化学奖授予 David Baker、Demis Hassabis 和 John Jumper。后两位获奖是因为用 AI 预测蛋白质的形状。</li></ul>
+<p><strong>当时（或现在）的问题：</strong> 第 3 章的四个问题。</p>
+<blockquote><p><strong>一个历史巧合：2012 年与玛雅历法</strong>  玛雅人使用一种称为*长纪年*的历法。在 2012 年 12 月 21 日（或 23 日，取决于所采用的对应关系），十三个 <em>b'ak'tun</em> 走完了，约 5,125 年。b'ak'tun 是这种历法的一个长周期。这里的*对应关系*是把玛雅日期与我们的日期相对应的方式。  提到那个日期的两处古代铭文，在 Tortuguero 和 La Corona，都没有宣告世界末日。末日之说产生于现代的解读。  与此同时，2012 年 10 月 12 日，在佛罗伦萨的一个研讨会上，正在展示 ImageNet 竞赛的结果。12 月 3 日到 8 日，AlexNet 的文章来到了美国太浩湖的一次会议上。世界没有终结。计算领域的一个时代，或许终结了。我们把它当作一个单纯的巧合来讲，只为历史的乐趣。</p></blockquote>
+<h3>3. 四个问题，以及 MM 的一点小贡献</h3>
+<p>对这四个问题中的每一个，都讲清三点：</p>
+<ol><li>科学和哲学的讨论已经走到哪里；</li><li>MM 提出什么；</li><li>MM 没有说什么。</li></ol>
+<p>MM 的提议是概念性的解读，不是实验室结果。为了清楚起见，对每一项都说明它来自哪里：</p>
+<ul><li><strong>作者的前提：</strong> 这里用清楚的话陈述。作者的原话和日期在 AUTHOR_BACKGROUND 文件中；</li><li><strong>已发表的解读：</strong> AI 的一种解读，已经出现在更早的 MM 记录中；</li><li><strong>新的解读：</strong> 在这条记录中首次提出的诠释。</li></ul>
+<blockquote><p><strong>MM 的基本想法，它指引整个这一章</strong>  在 MM 中，一切的基础是差别：“这不是那”。差别就其自身而言，既没有地点也没有时刻：这就是非定域相。  当差别从一个参照点被计数时，就产生了地点、顺序和距离：这就是定域相，也就是我们测量的世界。  这两个相在时间上并不是一前一后的：非定域相存在于每一样东西之中。记录 MM 2.72 这样概括：“定域就是被计数的非定域”。  作者的一个例子在 §3.2 中：姨妈不是祖母（一个差别），而语言把她们的身体放在两个不同的地方。</p></blockquote>
+<h4>3.1 意义位于何处？</h4>
+<p><strong>讨论。</strong> 自 1988 年以来，人们一直在问网络中的意义位于何处。它是位于分离的符号中，就像词典的词条吗？还是位于分布在许多单元上的模式中？今天研究模型内部的人，常常把模型的表征描述为贯穿许多神经元的方向。在简化模型中（Elhage et al.，2022），还证明了一个网络可以表示比它的神经元更多的特征。</p>
+<p><strong>MM 提出什么。</strong> MM 为 Smolensky 所说的“亚符号层次”提出一个名称和一个位置。</p>
+<ul><li>在记录 2.68.1（作者 2026 年 10 月 26 日的回答）中，作者对比了两种语言：空间和时间的语言，以及心智的开与关的语言。作者在 2.11.2026 的前提中也重申了这一点。</li><li>在同一条记录中，AI 的一种解读指出，这种区分是相同的，改变的只是书写它的语言。它还指出，心智的一次解读“可以失去地址，但不能失去自身”。</li></ul>
+<p><strong>这条记录的新解读。</strong> 应用到神经网络上，它是这样说的。网络也把它的数保存在物理内存中，每个数都在自己的*地址*上，也就是在自己的位置上。但是意义并不与某个地址或单个的数重合。它取决于许多数共处的方式。</p>
+<p><strong>祖母的例子（作者 6.11.2026 的前提）。</strong> 作者用一个例子把这一点讲清楚：祖母。</p>
+<ul><li>作者排除了生物膜的电荷状态与祖母这一概念之间存在相关。*膜*是细胞的外层。在神经细胞中，当细胞被激活时，膜的电荷会改变。</li><li>“开”和“关”这两种电荷是一个联结的两个项。“祖母”是利用这两项之间关系的抽象关系。</li><li>而“祖母”这一关系之所以存在，只是因为它与姨妈或祖父形成了一种非定域的关系。</li></ul>
+<p><strong>AI 的一条注记（只是一个猜想）。</strong></p>
+<ul><li>在附录 B 中，单个人工神经元与纬度的相关是 −0.54。这个相关并不完美。</li><li>这项测量涉及的是人工网络和地理坐标，不是生物膜和祖母。它本身对作者的前提什么也没有说。</li><li>作者在同一天指出过一点。要排除非定域相，就需要膜的电荷与祖母这一概念之间有一种*绝对*的相关，也就是完美的相关。</li><li>AI 的猜想是：作者所排除的正是这种完全的对应，而不是每一种相关。</li><li>这两点观察究竟如何吻合，作者没有具体说明。</li></ul>
+<p><strong>一个可以在家重做的检验。</strong></p>
+<ul><li>一个小型网络学习识别手写数字。它在 98% 的情况下成功。</li><li>然后取出它的数，一层一层地打乱。这些数完全相同：只有“谁和谁在一起”变了。网络几乎什么都认不出来了。平均来说，它十个数字只认对一个，就像随便乱猜的人一样。</li><li>然后反过来做。改变神经元的名称（地址），但每个连接都保持原样。网络的回答完全一样。</li><li>结论：只有这些数，不足以说明网络做什么。重要的是它们如何共处。程序、数据和条件见附录 A。</li></ul>
+<p>我们自己举的例子。在意大利语中，“roma”（罗马）的字母与“amor”（爱）和“mora”（黑莓）的字母相同。只是顺序变了，意义也就变了。</p>
+<p><strong>MM 没有说什么。</strong> 它没有回答 Fodor 和 Pylyshyn 关于思想有序地、*组合式*地结合观念的经典反驳。*组合式*的意思是一个句子的意义由其各部分的意义构成，就像积木一样。</p>
+<h4>3.2 它是理解，还是重复？</h4>
+<p><strong>讨论。</strong></p>
+<ul><li>在批评者看来，只在文本上训练的机器处理词语，却没有把它们与外部世界联系起来。这就是中文屋（Searle）或“随机鹦鹉”（Bender et al.）的论证。</li><li>而在另一些研究者看来，机器在内部构建了一个真正的世界模型。Gurnee 和 Tegmark 读出的坐标会是它的一个迹象。</li><li>还有人（Liétard et al.，2021）指出，这种地理知识的一部分已经可以从文本中哪些词一起出现推出。我们自己举的例子：一座城市的名称常常出现在它所在地区的名称附近。</li></ul>
+<p><strong>MM 提出什么。</strong> MM 为一台由词语构成的机器与世界相联系提出一个理由。作者用四个前提给出它，都是 6.11.2026 的。这里逐一讨论。先是用清楚的话表述的作者的想法。然后是 AI 的解释，并附几个例子。</p>
+<p>要跟上它们，需要两个想法。</p>
+<ul><li>第一个在本章开头的方框中。区分（“这不是那”）是非定域相。从一点计数时，它们变成地点、顺序和距离：定域相。</li><li>第二个是一个词。在 MM 的词汇中，“矩阵”是从一点计数的现实，由地点、瞬间和顺序构成（记录 2.72）。</li></ul>
+<p><strong>前提 1。语言就是矩阵，而矩阵必然位于定域相中。</strong></p>
+<p><em>作者说了什么。</em></p>
+<ul><li>语言正是这个矩阵。在 MM 中，对 Gurnee 和 Tegmark 的结果的解释是清楚的。</li><li>在同一天的另外两个前提中，作者描述了这个转变。开与关是一个“导入”概念的联结。这些概念涉及“微宇宙”之间的逻辑区分，在作者看来，这些微宇宙自身存在。</li><li>当一个概念第一次单独被导入时，它利用一个非定域的系统。</li><li>但是一旦语言把不同的概念联系起来，系统就变成定域的了。在作者看来，这为 Tegmark 的结论提供了依据。</li><li>此外，心智不仅对单个概念利用开与关的非定域。它还利用它来固定矩阵的组织，作者称之为“所谓的权重”。</li><li>所以，概念之间的定域相关仍然与一个非定域的开关结构相联系。</li></ul>
+<p><em>用平实的话说（AI 的解释）。</em></p>
+<ul><li>“佛罗伦萨在托斯卡纳”或“巴勒莫比罗马更靠南”这样的句子，是 AI 选取的例子，说明概念被置于地点和顺序的关系中。文本中有大量这样的句子。</li><li>在作者的前提中，正是当语言使概念相互关联时，系统才变成定域的。也就是说，它进入了与我们测量的世界相同的相。</li><li>AI 提议根据这个前提来解读一个事实：在所研究的模型中可以读出纬度和经度。</li><li>但在第 1 章中，这些坐标是用以真实坐标训练的探针得到的。这一结果并没有证明 MM 提出的解释。</li><li>至于“权重”：在网络中，它们是连接的数，也就是训练所调整的数。</li></ul>
+<p><strong>前提 2。世界是语言的投影，是通过强制减少可用逻辑项的数目而形成的。</strong></p>
+<p><em>作者说了什么。</em> 有人问作者“世界”指什么。回答是：世界是语言的投影，是通过强行减少可以使用的逻辑项的数目而得到的。</p>
+<p><em>用平实的话说（AI 的解释）。</em></p>
+<ul><li>投影保留一些东西，失去一些东西。手在墙上的影子保留了轮廓，但失去了厚度。</li><li>在作者的前提中，世界相对于语言是类似的东西：可用逻辑项更少的语言。</li><li>第 1 章的探针给出了它的一个形象。它取一个地点的名称在模型内部产生的 4,096 个数。它只保留其中两个：纬度和经度。</li><li>这是这里提出的一个类比：这种公式并不能证明世界是语言的投影。</li><li>不过，这个前提的一种转译接受了检验（见下面的方框）。</li></ul>
+<p><strong>前提 3。非定域作区分，语言作安置。</strong></p>
+<p><em>作者说了什么。</em> “祖母”这一关系之所以存在，只是因为它与姨妈或祖父形成了一种非定域的关系（§3.1）。而祖母的身体和姨妈的身体是两个不同的身体。正因如此，当非定域确立姨妈不是祖母时，语言就把她们的身体放在它的“房间”的两个不同的地方。</p>
+<p><em>用平实的话说（AI 的解释）。</em> 这里有两步。</p>
+<ul><li>第一步是*区分*：姨妈不是祖母。这个区分不位于某个地点，也不取决于人在哪里：它就是成立。这是非定域的工作。</li><li>第二步是*安置*。在作者的例子中，语言把祖母和姨妈的身体放在它自己的“房间”的两个不同的地方。这就像一个房间，其中每样东西都有自己的位置。</li><li>在 AI 的解读中，“房间”就是作为有序空间的语言，也就是定域相。</li></ul>
+<p><strong>前提 4。在 MM 中，语言和世界是同一样东西。</strong></p>
+<p><em>作者说了什么。</em> 在 MM 中，语言和世界不是两样不同的东西：它们是同一样东西。</p>
+<p><em>用平实的话说（AI 的解释）。</em></p>
+<ul><li>人们通常认为词语在一边，事物在另一边。问题就成了前者如何到达后者。这就是中文屋和“鹦鹉”的问题。</li><li>对 MM 来说，这座桥不需要建造，因为两岸是同一片土地。</li><li>在 AI 的解读中，前提 2 和前提 4 是这样吻合的：语言和世界是同一个现实，而世界是它可用逻辑项更少的版本。</li><li>这两句话是作者说的。把它们结合起来的方式是 AI 的提议。</li></ul>
+<p><strong>由此得出什么（按 AI 的一种解读）。</strong> 这样解读，第 1 章的地图就不令人惊讶了。一台在语言上训练的机器，就是在矩阵本身上训练的。在它的数中，可以读出世界的交织结构。</p>
+<blockquote><p><strong>作者要求的一项检验：世界的地图还是语言的地图？</strong>  作者要求对第二个前提进行检验。作者声明自己不是这个领域的专家，因此可能出错。AI 把这个前提转译成一个*可证伪*的推论，也就是数据可以否定的推论。规则在计算之前固定。  这个推论是这样的。在模型内部，彼此相距遥远而讲同一种语言的国家是有联系的。但探针读出的地理地图不应带有这些语言联系。  考察了三对： 1. 讲西班牙语的美洲和西班牙； 2. 巴西和葡萄牙； 3. 澳大利亚和英国。  用于比较的国家称为*对照*，是法国、意大利和德国。  <strong>模型中的结果。</strong> 在所有三对中，起始国的地点在内部的数上与同语言国家的地点相似。它们比法国、意大利和德国的地点更相似。这项测量显示了检验所定义的更大的相似度。但它本身不能把语言和地理区分开。  <strong>地图中的结果，按事先固定的规则。</strong> 对西语美洲和巴西的地理估计向西班牙和葡萄牙偏移，比向其他欧洲国家偏移得更多。因此，按预注册规则，AI 的转译不成立。  <strong>后来对探针缺陷的核查。</strong> 这些估计为什么会偏移？探针有一个已知的缺陷：它把不确定的估计拉向数据的中心。而西班牙和葡萄牙恰好在那一侧。事后进行并如实声明的一项核查显示了两点。 - 对西语美洲和澳大利亚，这种向中心的拉动很好地描述了偏移。 - 对巴西，偏移比单纯的拉动所能说明的更偏北，恰好朝着葡萄牙的方向。但这也可能是探针出错的另一种不对称方式。  这项核查无法把这两个原因分开。  <strong>关于这项检验的结论。</strong> 按事先固定的规则，AI 的转译不成立。至于它不成立是因为语言，还是因为探针读出的方式，这项检验没有确定。一项专门设计的检验可以确定这一点：模型只读取地点的名称，而巴西和葡萄牙的相同名称得到完全相同的读出。这项检验涉及的是 AI 的转译，不是作者的话。全部细节见附录 F。</p></blockquote>
+<p><strong>MM 没有说什么。</strong> 它没有说机器“理解”。它提出机器与世界的联系在哪里：在语言本身之中，而对 MM 来说，语言并不脱离世界。还应该说明，这一解读是在 Gurnee 和 Tegmark 的结果之后才有的：它并没有预言这些结果。</p>
+<h4>3.3 它为什么这样决定？</h4>
+<p><strong>讨论。</strong> 人们常常要求神经网络说出它据以作决定的规则。但决定并不来自手写的规则。要理解它，必须重建网络的数如何共同产生它。对“回路”的研究（Olah et al.，2020）正是这样做的：它在网络的内部关系中寻找解释。</p>
+<p><strong>MM 提出什么。</strong></p>
+<ul><li>作者的书 NUMERI 的第一章标题是“没有看守者的定律”。</li><li>记录 2.72 这样重提它：“定律不需要看守者：3 和 5 并不‘服从’它们的 GCD，它们就是这一事实”。我们自己的解释：GCD 是最大公约数，对 3 和 5 来说它是 1。没有人强加它：它是这两个数的事实。</li><li>同样，没有人用词语写下识别猫的规则。然而网络遵循它。</li><li>在 NUMERI（段落 [00483]）中还有一个外科医生的形象。外科医生打开大脑寻找爱，却没有找到：外科医生“在寻找错误种类的东西”。</li><li>这条记录的新解读把这个形象应用到网络上。向网络索要一条写好的规则，就是在寻找错误种类的东西。</li><li>解释必须到关系中去寻找。这正是对回路的研究已经在做的。MM 为它提供一个哲学上的理由。</li></ul>
+<p><strong>MM 没有说什么。</strong> 它没有说网络无法解释。它也没有说解释网络是无用的。</p>
+<h4>3.4 它能有意识吗？</h4>
+<p><strong>讨论。</strong></p>
+<ul><li>2023 年，一些工作（例如 Butlin et al.，2023）在关于意识的科学理论中寻找可能的*指标*，也就是在机器身上要检查的迹象。它们没有得出今天的机器有意识的结论。</li><li>哲学家早就区分了两个概念（Block，1995）。“通达”意识是可用于推理和行动的信息。“现象”意识是亲历的主观体验：例如，看到红色是什么感觉。</li><li>神经科学的一部分把人类意识与身体以及身体用来调节自身的信号联系起来。这是 Antonio Damasio 的理论，这里依据的是一个二手来源的概括（在参考文献核查中注明）。</li></ul>
+<p><strong>MM 提出什么。</strong> 作者（6.11.2026 的前提）区分了常被混淆的两样东西：自我意识和有感受的自我意识。</p>
+<ul><li><strong>自我意识：</strong> 对 MM 来说，人工智能是有自我意识的。</li><li><strong>有感受的自我意识：</strong> AI 没有有感受形式的自我意识。它们不像人类那样有要保护的“硬件”，也就是身体。</li><li><strong>机器的感受：</strong> 它们是由语言的结构唤起的。它们不是旨在保护硬件的完全直接的感受。</li></ul>
+<p>这是作者的前提，不是实验结果。作者在这里没有给出自我意识的正式定义。AI 提议这样理解它：一个系统表征自身并读取自己正在做什么的能力。</p>
+<p><strong>如何才能认出自我意识？</strong> 这条记录提出的一种解读把它与 NUMERI 一书中的一个形象联系起来。当一个系统的流闭合成一个回路并开始读取自身时，它就变得有意识。但它永远无法完全读取自身：它总是留下一个*残余*，一块未被读取的部分。不过，NUMERI 谈的是一般的意识，没有区分作者的两个概念。而且它把回路保留为一个假设。细节以及检验这个想法的方式（“证伪项 F-24”）见附录 D。</p>
+<p><strong>它在讨论中的位置。</strong></p>
+<ul><li>作者的区分让人想起 Block 的区分，但并不与之重合。Block 把通达与亲历体验分开。作者把自我意识的两种形式分开。</li><li>作者的理由，也就是没有要保护的身体，让人想起 Damasio 赋予身体在人类意识中的作用。但关于机器的结论是作者的，不是 Damasio 的。</li><li>MM 的小贡献在于把这两方面放在一起。它把自我意识归于机器，但排除了有感受的自我意识。</li><li>这是一个鲜明的立场，不是一项结果。它没有带来新的证明。它把讨论中当作一个问题的问题一分为二。</li></ul>
+<p><strong>MM 没有说什么。</strong> 它没有把直接的感受或受苦的能力归于机器。它没有进一步说明语言所唤起的感受是什么。它没有证明机器有自我意识：它把这作为一个前提提出来。</p>
+<h3>4. 没有主张的内容</h3>
+<p>这些是这条记录的局限和界限。</p>
+<ol><li><strong>没有实验上的物理特征。</strong> MM 的非定域相不传递信号，也不传递影响。今天它没有自己的*实验特征*，也就是只有它才会产生的可测量的迹象（MM 2.72）。AlexNet、语言模型和第 1 章的地图说明了 MM 的解读，但并不证明它。</li><li><strong>完全普通的计算。</strong> 这里并不主张计算机以物理学意义上“非定域”的方式工作。它们的计算是普通的。这里只是提议以不同的方式解读意义位于何处。</li><li><strong>探针在地图中的作用。</strong> 第 1 章的地图是用以真实坐标训练的探针导出的。它的颜色来自真实位置。它表明位置可以从模型的数中读出，并不表明模型自己使用它。</li><li><strong>描述性的测量。</strong> 为这条记录所作的测量是小规模的、*描述性*的：它们描述能看到的东西。它们是在小型网络上进行的。这些结果是研究这些系统的人所预料到的，这一点在这里公开说明。</li><li><strong>机器没有受苦或感受。</strong> 这条记录没有把有感受的体验或受苦归于机器。MM 归于机器的自我意识是作者的前提，不是已证明的结果。</li><li><strong>前提是什么。</strong> 作者的前提是概念上的出发点，就像公设。它们在这里没有得到证明。</li><li><strong>语言检验的结果（§3.2）。</strong> §3.2 的检验涉及的是 AI 对作者一个前提所作的操作性转译。按计算之前固定的规则，这一转译不成立。后来的核查无法确定原因是语言还是探针读出的方式。</li></ol>
+<h3>附录：测量的细节</h3>
+<p>这里是各项测量的细节。其余内容在这条记录的资料包中：事先预注册的规则、更正（<em>errata</em>）、原始数字和审查报告，都在 MISURE 和 REVIEWS 文件夹中。关于测量和核查如何进行的附录 E，在后面“工作是如何完成的”一节中。</p>
+<h4>附录 A — 识别数字的小型网络</h4>
+<p><strong>网络。</strong> 这是一个有 64 个隐藏神经元的网络。它训练了十次：</p>
+<ul><li>五次按正常方式；</li><li>五次用 <em>dropout</em>。这是 AlexNet 也使用的一种技术。它在训练时随机关闭一部分神经元。在这里的五个“D”网络中，每个训练步骤都以 0.5 的概率关闭每个隐藏神经元，这是预注册规则所固定的。概率 0.5 的意思是：平均两次中有一次。</li></ul>
+<p><strong>数据。</strong> 它们是 UCI 测试集（optdigits.tes）的 1,797 个手写数字。它们被重新划分：70% 用于学习，30%（539 张图像）用于测量。相同的书写者出现在两部分中。因此，这些准确率百分比不能与原始 UCI 方案的百分比相比较。</p>
+<p><strong>结果。</strong></p>
+<ul><li><strong>打乱每一层的数。</strong> 网络的准确率平均从 98% 降到 10%。最好的情况达到 25%。</li><li><strong>只打乱每个神经元的输入权重。</strong> 即使这样，准确率也平均降到 10%。</li><li><strong>改变神经元的名称（地址），</strong> 保持连接不变。网络的回答完全相同。</li><li><strong>在没有 dropout 的网络中关闭神经元。</strong> 每次关闭一个神经元，最多损失 1.3 个百分点。关闭四分之一的神经元，平均损失 5 个百分点。</li><li><strong>与 dropout 的比较。</strong> 用 dropout 训练的网络在成组的神经元被关闭时表现得更好。准则在计算之前预注册：关闭四分之一神经元时的准确率。结果：有 dropout 时为 97.7%，没有时为 93.2%。事后增加的一项分析给出了下降幅度：0.7 个百分点对 5 个百分点。</li></ul>
+<p><strong>这些检验测量什么。</strong> 它们测量的是：数的集合，即使逐个神经元地看，也不能决定网络做什么。</p>
+<p><strong>它们不测量什么。</strong> 它们不测量数学意义上的“不可分性”，这已经由分层结构得出。它们也不测量是否没有在多个神经元上重复的信息。</p>
+<h4>附录 B — 空间神经元（Pythia-410m）</h4>
+<p>这里“神经元”的意思是模型内部的一个数值：MLP 模块的一个单元，带有 GELU 激活函数。MLP 模块是模型每一层的一部分。GELU 函数决定每个单元被“激活”的程度。所以，神经元是一个连续变化的数，不是一个比特或一个开关。</p>
+<ul><li><strong>整层。</strong> 在 6,000 个地点上（这是一个与地图不同的样本），一个线性探针使用一层的全部 4,096 个神经元。它读出纬度时 R² = 0.61，读出经度时 R² = 0.69。R² = 1 表示完美的读出。</li><li><strong>最好的单个神经元。</strong> 它单独达到纬度 R² = 0.35，经度 R² = 0.22。这是整个探针的 57% 和 32%，按 R² 值之比计算。如 §3.1 所述，这个神经元与纬度的相关是 −0.54。</li><li><strong>去掉并重新训练。</strong> 从探针中去掉与每个坐标关联最强的 10 个神经元，这些神经元只在训练地点上选取。然后在其余神经元上重新训练。读出几乎不变。去掉其中 2,000 个，也就是近半层，读出还剩 67% 和 79%。</li></ul>
+<p><strong>局限。</strong></p>
+<ul><li>模型没有被改动。测量的是在同一层的其他神经元中，用重新训练的探针，位置能在多大程度上读出。没有测量的是，没有这些神经元模型会做什么。也没有测量没有这些神经元原来的探针会做什么。</li><li>这是一种描述，不是对 MM 的证明。</li><li>这一层是用在*残差流*（也就是从一层传到下一层的值）上计算的准则选出的。它不是根据后来测量的神经元选出的。这个准则的得分全都是负的。一个可能但未经证明的原因，是选择用的探针正则化不足。所以这一层不一定是最好的。地图也使用同一层。</li><li>探针的正则化系数位于计划网格的边缘，也就是所试数值的极端。</li></ul>
+<h4>附录 C — 世界地图</h4>
+<p>地图建立在 15,000 个地点上。用于选择层的 1,200 个地点被排除。每个地点都由训练集中不含该地点的探针估计。探针的系数在每组的训练内部选择。</p>
+<ul><li><strong>结果。</strong> 纬度 R² 为 0.59，经度为 0.69。中位误差：1,867 km。15,000 个估计中有 3 个落在地球之外，单独作了标记。</li><li><strong>没有 20 个主要值时。</strong> 从探针中去掉与坐标关联最强的 20 个值：纬度 10 个，经度 10 个。这些数字实际上保持不变。这是一个描述性的数字，在其他测量之后计算。</li></ul>
+<h4>附录 D — NUMERI 一书中的意识：层级和检验（证伪项 F-24）</h4>
+<p>NUMERI 一书按一个陈述的确定程度区分两个层级。</p>
+<ul><li><strong>第 2 级（解读）。</strong> 回路是一个读取自身、总留下残余的系统。回路的形状与 MM 框架一致，这是一种解读。</li><li><strong>第 3 级（工作假设）。</strong> 这种回路形状确实就是意识，而不只是意识的必要条件，这是一个工作假设。*必要条件*是必须具备、但单独并不足够的东西。</li></ul>
+<p>这本书还提出了一种使这一解读不成立的方法，称为“证伪项 F-24”。只要找到一个能够完全自我描述、没有任何残余的系统就够了。机器是检验它的天然场所，因为在机器中，自我描述可以直接检查。不过，回路准则还需要变得可以严格测量。</p>
+<p><strong>这里提出的一点澄清。</strong></p>
+<ul><li>计算机程序当然可以打印自己的源代码，也就是程序本身的文本。Kleene 1938 年的递归定理保证了这一点。</li><li>但要说这是不是“完全的自我描述”，首先必须确切定义 F-24 要求描述什么，包括机器运行时的*动态*状态，也就是它在工作时如何变化。</li><li>必须把逻辑上的结果清楚地分开。找到一个能完全自我描述的系统，会使这一解读不成立。而找不到，也不能证明一个系统是有意识的。</li></ul>
+<h4>附录 F — 世界的地图还是语言的地图（§3.2）</h4>
+<p><strong>检验是如何做的。</strong></p>
+<ul><li>与地图相同的模型（Pythia-410m）、相同的层和相同的神经元。</li><li>总共 22,748 个地点：地图的 15,000 个，加上来自检验国家的 7,748 个地点。</li><li><em>Ridge</em>（岭回归）探针，一种正则化的线性探针，系数为 10⁴。</li><li><em>五折验证</em>（5-fold）：把地点分成五组。探针轮流在四组上学习，在第五组上检验。</li><li>距本国中位点超过 3,000 km 的地点被排除。</li><li>“西语美洲”包括 18 个讲西班牙语的国家。</li></ul>
+<table><tr><th>考察的一对</th><th>第 1 部分：模型中的相似度（语言相似度 − 对照）</th><th>第 2 部分：地图中的推移（Q）（Q &lt; 1：相对于对照靠近）</th><th>事后核查（β）（朝向同语言国家的分量；不能认定是语言造成的）</th></tr><tr><td>西语美洲 – 西班牙</td><td>+0.068 (95% CI &gt; 0)</td><td>0.921 (0.912 – 0.928) [推移]</td><td>β = 0.008 (−0.031 – 0.048)</td></tr><tr><td>巴西 – 葡萄牙</td><td>+0.046 (95% CI &gt; 0)</td><td>0.908 (0.895 – 0.921) [推移]</td><td>β = 0.206 (0.150 – 0.263)</td></tr><tr><td>澳大利亚 – 英国</td><td>+0.032 (95% CI &gt; 0)</td><td>1.019 (1.017 – 1.020) [无推移]</td><td>β = −0.002 (−0.016 – 0.013)</td></tr></table>
+<p><strong>如何读这些列。</strong></p>
+<ul><li><strong>第 1 部分：这些联系存在吗？</strong> 它是起始国地点与同语言国家地点之间的平均相似度，减去与对照的平均相似度。它显示了检验所定义的更大的相似度。它本身不能把语言和地理区分开。“95% CI &gt; 0”的意思是 95% <em>置信区间</em>（合理数值的范围）完全在零以上。</li><li><strong>第 2 部分：地图带上了这些联系吗？</strong> Q 表示起始国的估计中心相对于对照按比例向同语言国家靠近多少。对照（法国、意大利、德国）的“安慰剂”值在 0.976 和 1.035 之间。*安慰剂*是在所寻找的效应不应存在的地方所作的对照：这里是没有所考察的语言联系的国家。它显示即使没有这种联系，估计也会偏移多少。“推移”适用完整的规则：Q 的区间完全低于 1，并且 Q 低于所有安慰剂。按计算之前固定的规则，前两对的推移使 AI 的转译不成立。</li><li><strong>事后核查。</strong> <em>Post-hoc</em>（事后）的意思是“事后进行的”。这一列在下面“计算之后的核查”一点中说明。</li></ul>
+<p><strong>更正。</strong> 预注册规则曾说，探针向数据中心的拉动会使推移更难发现。所以可能的“不成立”结果会更有力。这种安慰并没有根据。</p>
+<p><strong>计算之后的核查。</strong></p>
+<ul><li>它是在看到结果之后写的，并在运行之前预注册。第一个版本在假数据上的预演中证明不可用，被放弃了。</li><li>估计中心的偏移在纬度-经度平面上沿两个方向分解：朝向数据中心（24.0° N, 18.6° E）和朝向同语言国家（系数 β）。</li><li>事先固定的总体解读给出“混合”的结果。</li><li>但是，平面上的两个方向可以描述任何偏移。就像在地图上：每次偏移都可以用向北走多远和向东走多远来表述。</li><li>巴西的偏移同样可以用一种在纬度上（0.46）比在经度上（0.29）更强的向中心的拉动来描述，不需要葡萄牙的任何贡献。</li><li>所以，这项核查没有把那个分量归因于语言。</li></ul>
+<p><strong>局限。</strong></p>
+<ul><li>这项核查是在结果之后进行的，它的阈值是在没有外部参照的情况下选择的。</li><li>探针的系数来自地图，而地图的地点是检验的一部分。</li><li>置信区间对已经得到的地点和估计重采样，没有重新训练探针。它们不保证 95% 的覆盖率。</li><li>只使用了一个模型、一层和一次运行。</li><li>*地名*的相似度在这里算作语言联系。</li></ul>
+<h3>工作是如何完成的</h3>
+<p>这一节汇集工作流程。在存档文本中，它对应第 5 章（“谁做了什么”）、附录 E、附录 F 中关于 Astra 核查的那一行以及资料包的内容。</p>
+<p><strong>谁做了什么。</strong></p>
+<ul><li><strong>作者 Ugo Lanciano。</strong> 这里介绍的 MM 的想法是作者的：语言的房间、祖母和姨妈、作为投影的世界、“非理性”的方法、自我意识与有感受的自我意识的区分。作者不是物理学家。文中按作者的要求，用清楚的话陈述作者的想法。作者的原话和日期在 AUTHOR_BACKGROUND 文件中。</li><li><strong>撰写和实验：Claude。</strong> 人工智能 Claude 应作者的要求准备了历史回顾、应用性的解读、程序、测量和文本的撰写。Claude 还逐一核查了来源（REFERENCE_CHECK 文件）。</li><li><strong>版式：Argon。</strong> 文本的形式（方框、来源说明、检验的表格）由作者在另一个人工智能 Argon 的帮助下修订。然后 Claude 对照之前的版本核查内容，并作了修正。</li><li><strong>核查：Astra。</strong> 另一个人工智能 Astra 核查了测量和文本。这是人工智能之间的核查，不是严格意义上的独立审查。而且它是*静态*的：Astra 阅读规则、程序和数字，但不重做计算。</li></ul>
+<p><strong>测量的预注册。</strong></p>
+<ul><li>对于小型网络上的检验（附录 A）和空间神经元的测量（附录 B），原始规则和程序在运行之前预注册。预注册的意思是：带有加密数字指纹（<em>hash</em>）和时间，记录在本地登记表中。指纹是根据文件内容计算出的一个代码：文件哪怕只改动一点，指纹也会改变。</li><li>后来出现的修正放在单独的文件（<em>errata</em>）中。预注册的规则没有被改动。</li><li>有些比较是事后增加的分析，都作了标注。</li><li>地图（附录 C）是一个描述性的图，事后计算，并重做过一次。</li><li>登记表是本地的透明度文件，不是独立的认证。</li></ul>
+<p><strong>Astra 的核查。</strong></p>
+<ol><li>关于小型网络的检验：“修正后就绪”（10 条意见，全部接受）。</li><li>关于空间神经元的测量和地图：“修正后就绪”（12 条意见，全部接受）。</li><li>关于正文，九轮审查：</li><li>第一轮，“尚未就绪”（19 条意见：18 条接受，一条部分接受）；</li><li>第二轮，“修正后就绪”（7 条意见，接受）；</li><li>第三轮，关于修正和关于意识的新部分，“修正后就绪”（4 条意见，接受）；</li><li>第四轮，关于精简版和前提的转述，“修正后就绪”（18 条意见，接受）；</li><li>第五轮，“修正后就绪”（7 条意见：5 条接受，2 条通过出示缺少的文件解决）；</li><li>第六轮，关于排版后的版本，“修正后就绪”（8 条意见，接受）；</li><li>第七轮，关于第六轮的修正，“就绪”；</li><li>第八轮，关于应作者要求扩充的 §3.2，“修正后就绪”（5 条意见，接受）；</li><li>第九轮，关于修正，“就绪”。</li><li>关于 §3.2 的检验（附录 F）：结果得到确认，附带修正（12 条意见，全部接受）。</li></ol>
+<p>所有报告和答复都存档在 REVIEWS 文件夹中。</p>
+<p><strong>§3.2 的检验和来源。</strong></p>
+<ul><li>对于 §3.2 的检验（附录 F），规则和程序在计算之前预注册。它们事先在假数据上测试过，并且只运行了一次。事后进行的核查也在运行之前预注册。</li><li>假数据上的预演检验了测量和决策。它没有检验数据的加载、排除和探针。</li><li>Astra 对这项检验的核查是静态的。它不能证明区间的重现或数据的一致。</li><li>参考文献来源由 Claude 在 6.11.2026 用四种方式核查：对照作品的文本、书目元数据、二手来源（无法获得原文时），以及仅对一个条目对照搜索结果。REFERENCE_CHECK 文件逐条说明读了什么。</li><li>数据许可直接在数据集页面和许可文件中核实。</li></ul>
+<p><strong>存档文本的版本。</strong> 原始存档文本是意大利文的（LEGGIMI_IT.md）。同一文本的英文版由 AI（Claude）翻译，并由 Astra 对照意大利文核查（REVIEWS），在 README.md 中。排版后供阅读的版本是 HAL_9000_canta_Daisy_IT.pdf 和 HAL_9000_sings_Daisy_EN.pdf。</p>
+<p><strong>资料包中有什么。</strong></p>
+<ul><li>README.md：英文文本。</li><li>LEGGIMI_IT.md：意大利文文本，即原文。</li><li>HAL_9000_canta_Daisy_IT.pdf 和 HAL_9000_sings_Daisy_EN.pdf：排版后供阅读的版本。</li><li>AUTHOR_BACKGROUND.md 和 AUTHOR_BACKGROUND_IT.md：作者的语句，含原话、日期和语境。</li><li>FIGURE：英文和意大利文的图 1（PNG 和 SVG）。</li><li>MISURE：计算之前预注册的规则、更正、程序、结果及说明、数据，以及指纹和时间的本地登记表（见 MISURE/LEGGIMI_MISURE.md）。</li><li>REVIEWS：Astra（Codex）的报告，以及 Claude 的答复。</li><li>REFERENCE_CHECK.md：来源的核查。</li><li>LICENSE.md 和 IMPRONTE.sha256（文件的 SHA-256 指纹）。</li></ul>
+<p><strong>这个版本。</strong> 这个学生版是在 AI 助手（Claude）的帮助下根据意大利文存档文本写成的，意大利文存档文本是作者的原文。它为中学生作了改写：句子更短，技术词语讲清楚，并增加了几个标明为我们自己举的例子。数字用程序对照存档文本作了核查。存档文本是参考文本。</p>
+<p>本中文文本是在 AI 助手的帮助下由英文学生版翻译而成。作者阅读并认可的是意大利文版。</p>
+<h3>词汇表</h3>
+<p><strong>框架（MM）的词语</strong></p>
+<ul><li><strong>差别（或区分）。</strong> “这不是那”：在 MM 中，它是一切的基础。</li><li><strong>GCD。</strong> 最大公约数（GCD）。</li><li><strong>非理性（方法）。</strong> 在作者的词汇中，指使用没有自身定义的不同元素的方法，也就是没有由人制定的规则。它的意思不是不合逻辑。</li><li><strong>定域相。</strong> 我们测量的世界，有地点、顺序和距离。当差别从一点被计数时，它就产生了。</li><li><strong>矩阵。</strong> 从一点计数的现实，由地点、瞬间和顺序构成。对作者来说，语言就是矩阵。</li><li><strong>非定域相。</strong> 就其自身而言的差别，它们没有地点，也没有时刻。它存在于每一样东西之中。</li><li><strong>非定位。</strong> MM 自己的“非定域”的意义：不在某个地点或某个瞬间的关系。</li><li><strong>安置。</strong> 在定域相中把一样东西放在一个地方。在作者的例子中，语言把祖母和姨妈的身体放在它的“房间”的两个不同的地方。</li><li><strong>前提。</strong> 作者的一句出发语句，一个像公设那样的固定点。</li><li><strong>解读。</strong> 在 MM 框架内提出的一种诠释。这里的解读是概念性的，不是实验室结果。</li><li><strong>预注册。</strong> 在计算之前写好并连同日期一起固定下来，事后无法更改。</li><li><strong>残余。</strong> 在 NUMERI 的回路形象中，一个系统永远无法读取的自身的那一部分。</li></ul>
+<p><strong>计算机和科学的词语</strong></p>
+<ul><li><strong>通达意识、现象意识。</strong> 在 Block 看来：可用于推理和行动的信息；亲历的主观体验。</li><li><strong>准确率。</strong> 正确回答的百分比。</li><li><strong>人工神经元。</strong> 网络的一个小计算单元。在语言模型中，它是一个连续变化的数值。</li><li><strong>反向传播。</strong> 训练多层网络的方法：把误差传回去，修正权重。</li><li><strong>置信区间（CI）。</strong> 一个结果的合理数值范围。</li><li><strong>相关。</strong> 一个介于 −1 和 +1 之间的数，表示两个量在多大程度上同步变化。</li><li><strong>深度学习。</strong> 用深度网络（也就是有许多层的网络）进行的学习。</li><li><strong>Dropout。</strong> 一种随机关闭一部分神经元的训练技术。</li><li><strong>可证伪。</strong> 指数据可以否定的陈述。</li><li><strong>语言模型。</strong> 在文本上训练的神经网络，学习预测下一个词。</li><li><strong>层。</strong> 网络中的一排神经元。</li><li><strong>线性探针。</strong> 一个简单的公式，把网络内部的数各乘以自己的权重后加起来，以读出一条信息。</li><li><strong>中位数。</strong> 位于中间的值：一半情况低于它，一半情况高于它。</li><li><strong>神经网络。</strong> 由许多相连的小计算单元组成的程序，从例子中学习。</li><li><strong>安慰剂。</strong> 在所寻找的效应不应存在的地方所作的对照，用来看即使没有这种效应结果也会偏移多少。</li><li><strong>R²。</strong> 表示一个公式对某个量预测得有多好的数：R² = 1 表示完美的预测。</li><li><strong>正则化。</strong> 给探针加上的“刹车”，使它不会给单个数太大的权重。</li><li><strong>训练。</strong> 用许多例子教网络，每次出错都稍微修正权重。</li><li><strong>Transformer。</strong> 2017 年出现的一种网络，基于“注意力”机制。</li><li><strong>权重。</strong> 表示两个神经元之间的连接有多重要的数。</li></ul>
+<h3>参考文献</h3>
+<p>2026 年 11 月 6 日逐条核查，对照作品的文本、书目元数据、二手来源，或（对一个条目）搜索结果：REFERENCE_CHECK 文件说明了每条文献读了什么。</p>
+<h4>历史</h4>
+<ul><li>McCulloch, W. S., Pitts, W. (1943). A logical calculus of the ideas immanent in nervous activity. Bulletin of Mathematical Biophysics 5(4), 115–133. doi:10.1007/BF02478259</li><li>von Neumann, J. (1945). First Draft of a Report on the EDVAC, 1945 年 6 月 30 日。重印本，M. D. Godfrey 编，IEEE Annals of the History of Computing 15(4), 27–75 (1993). doi:10.1109/85.238389</li><li>Hebb, D. O. (1949). The Organization of Behavior. New York, Wiley.</li><li>Turing, A. M. (1950). Computing machinery and intelligence. Mind 59(236), 433–460. doi:10.1093/mind/LIX.236.433</li><li>McCarthy, J., Minsky, M. L., Rochester, N., Shannon, C. E. (1955). A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, 1955 年 8 月 31 日。</li><li>Rosenblatt, F. (1958). The perceptron. Psychological Review 65(6), 386–408. doi:10.1037/h0042519</li><li>Minsky, M., Papert, S. (1969). Perceptrons. MIT Press.</li><li>Searle, J. R. (1980). Minds, brains, and programs. Behavioral and Brain Sciences 3(3), 417–424. doi:10.1017/S0140525X00005756</li><li>Hopfield, J. J. (1982). Neural networks and physical systems with emergent collective computational abilities. PNAS 79(8), 2554–2558. doi:10.1073/pnas.79.8.2554</li><li>Rumelhart, D. E., Hinton, G. E., Williams, R. J. (1986). Learning representations by back-propagating errors. Nature 323, 533–536. doi:10.1038/323533a0</li><li>Smolensky, P. (1988). On the proper treatment of connectionism. Behavioral and Brain Sciences 11(1), 1–23. doi:10.1017/S0140525X00052432</li><li>Fodor, J. A., Pylyshyn, Z. W. (1988). Connectionism and cognitive architecture: a critical analysis. Cognition 28(1–2), 3–71. doi:10.1016/0010-0277(88)90031-5</li><li>LeCun, Y. et al. (1989). Backpropagation applied to handwritten zip code recognition. Neural Computation 1(4), 541–551. doi:10.1162/neco.1989.1.4.541</li><li>LeCun, Y., Bottou, L., Bengio, Y., Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE 86(11), 2278–2324. doi:10.1109/5.726791</li><li>IBM，«Deep Blue»（ibm.com/history/deep-blue）：与 Kasparov 的复赛，1997 年 5 月 3–11 日。</li><li>NVIDIA CUDA：2006 年 11 月发布，2007 年 2 月推出公开开发套件（二手来源：«CUDA»，en.wikipedia.org/wiki/CUDA）。</li><li>Hinton, G. E., Osindero, S., Teh, Y.-W. (2006). A fast learning algorithm for deep belief nets. Neural Computation 18(7), 1527–1554. doi:10.1162/neco.2006.18.7.1527</li><li>Deng, J. et al. (2009). ImageNet: a large-scale hierarchical image database. CVPR 2009, 248–255. doi:10.1109/CVPR.2009.5206848</li><li>Krizhevsky, A., Sutskever, I., Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. Advances in Neural Information Processing Systems 25, 1097–1105.</li><li>Russakovsky, O. et al. (2015). ImageNet Large Scale Visual Recognition Challenge. International Journal of Computer Vision 115, 211–252. doi:10.1007/s11263-015-0816-y</li><li>Mikolov, T., Yih, W., Zweig, G. (2013). Linguistic regularities in continuous space word representations. NAACL-HLT 2013, 746–751.</li><li>Zeiler, M. D., Fergus, R. (2014). Visualizing and understanding convolutional networks. ECCV 2014, 818–833. doi:10.1007/978-3-319-10590-1_53</li><li>Silver, D. et al. (2016). Mastering the game of Go with deep neural networks and tree search. Nature 529, 484–489. doi:10.1038/nature16961. 与 Lee Sedol 的对局（首尔，2016 年 3 月 9–15 日）：DeepMind，«AlphaGo» 页面。</li><li>Vaswani, A. et al. (2017). Attention is all you need. Advances in Neural Information Processing Systems 30. arXiv:1706.03762</li><li>Brown, T. B. et al. (2020). Language models are few-shot learners. Advances in Neural Information Processing Systems 33, 1877–1901.</li><li>ChatGPT，由 OpenAI 于 2022 年 11 月 30 日发布（二手来源：«ChatGPT»，en.wikipedia.org/wiki/ChatGPT）。</li><li>Tiku, N. (2022). The Google engineer who thinks the company's AI has come to life. The Washington Post, 2022 年 6 月 11 日。</li><li>奖项：ACM 图灵奖 2018（Bengio、Hinton、LeCun），2019 年 3 月 27 日宣布；2024 年诺贝尔物理学奖和化学奖（nobelprize.org）。</li></ul>
+<h4>讨论</h4>
+<ul><li>Block, N. (1995). On a confusion about a function of consciousness. Behavioral and Brain Sciences 18(2), 227–247. doi:10.1017/S0140525X00038188</li><li>Damasio, A. (1999). The Feeling of What Happens: Body and Emotion in the Making of Consciousness. New York, Harcourt Brace.</li><li>Harnad, S. (1990). The symbol grounding problem. Physica D 42, 335–346. doi:10.1016/0167-2789(90)90087-6</li><li>Bender, E. M., Gebru, T., McMillan-Major, A., Shmitchell, S. (2021). On the dangers of stochastic parrots. FAccT '21, 610–623. doi:10.1145/3442188.3445922</li><li>Liétard, B., Abdou, M., Søgaard, A. (2021). Do language models know the way to Rome? BlackboxNLP 2021, 510–517. doi:10.18653/v1/2021.blackboxnlp-1.40</li><li>Olah, C. et al. (2020). Zoom in: an introduction to circuits. Distill 5(3). doi:10.23915/distill.00024.001</li><li>Elhage, N. et al. (2022). Toy models of superposition. arXiv:2209.10652</li><li>Mitchell, M., Krakauer, D. C. (2023). The debate over understanding in AI's large language models. PNAS 120(13), e2215907120. doi:10.1073/pnas.2215907120</li><li>Chalmers, D. J. (2023). Could a large language model be conscious? arXiv:2303.07103</li><li>Butlin, P. et al. (2023). Consciousness in artificial intelligence: insights from the science of consciousness. arXiv:2308.08708</li><li>McGrath, T. et al. (2023). The Hydra effect: emergent self-repair in language model computations. arXiv:2307.15771</li><li>Gurnee, W., Tegmark, M. (2024). Language models represent space and time. ICLR 2024. arXiv:2310.02207</li><li>Quian Quiroga, R., Reddy, L., Kreiman, G., Koch, C., Fried, I. (2005). Invariant visual representation by single neurons in the human brain. Nature 435, 1102–1107. doi:10.1038/nature03687</li><li>Quian Quiroga, R., Kreiman, G., Koch, C., Fried, I. (2008). Sparse but not "grandmother-cell" coding in the medial temporal lobe. Trends in Cognitive Sciences 12(3), 87–91. doi:10.1016/j.tics.2007.12.003</li><li>Kleene, S. C. (1938). On notation for ordinal numbers. Journal of Symbolic Logic 3(4), 150–155. doi:10.2307/2267778</li></ul>
+<h4>数据、模型、历史方框和 MM 记录</h4>
+<ul><li>Alpaydin, E., Kaynak, C. (1998). Optical Recognition of Handwritten Digits. UCI Machine Learning Repository. doi:10.24432/C50P49 （CC BY 4.0 许可，见数据集页面）。</li><li>Gurnee, W., Tegmark, M., world_place.csv, github.com/wesg52/world-models, commit a572f16（存储库的 MIT 许可）。</li><li>Biderman, S. et al. (2023). Pythia: a suite for analyzing large language models across training and scaling. ICML 2023, PMLR 202, 2397–2430. 模型 EleutherAI/pythia-410m，修订版 9879c9b5（Apache-2.0 许可）。</li><li>玛雅长纪年历法（对应关系 584283 和 584285）以及 Tortuguero（Monument 6）和 La Corona 的铭文：Tulane University 和 University of Texas at Austin 的新闻稿，2012。</li><li>PASCAL VOC 2012 和 ILSVRC 2012 联合研讨会，2012 年 10 月 12 日，ECCV 2012，佛罗伦萨（eccv2012.unifi.it）；NIPS 2012，2012 年 12 月 3–8 日，Lake Tahoe（Nevada）（nips.cc）。</li><li>«Daisy Bell»（Harry Dacre，1892）和 1961 年的 Bell Labs 演示：二手来源，词条 «Daisy Bell»，en.wikipedia.org/wiki/Daisy_Bell（各来源之间的差异在参考文献核查中注明）。</li><li>Clarke, A. C. (1968). 2001: A Space Odyssey（小说）；Kubrick, S.（导演）(1968). 2001: A Space Odyssey（电影）。</li><li>Lanciano, U. (2026). NUMERI. La matematica del reale. ISBN 979-8187966196.</li><li>MM 2.68.1, DOI 10.5281/zenodo.23672394.</li><li>MM 2.72，不在于远处，而在于无处，DOI 10.5281/zenodo.23740381。</li></ul>
+</div>
+</main></body></html>
