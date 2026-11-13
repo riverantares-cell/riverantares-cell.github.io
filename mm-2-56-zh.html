@@ -104,12 +104,12 @@ ol.lavori li{margin:.5em 0}nav{font-size:.9em;margin-bottom:1.5em}nav a{text-dec
 <p><strong>谁做了计算。</strong> 作者不是职业物理学家。计算是在 AI 助手（Claude，并由 Codex 进行两次核查）的帮助下完成的。没有人类*审稿人*审阅过这些计算。审稿人是在发表前核查一项工作的专家。</p>
 <p><strong>核查：由 Codex/GPT-6 进行的两轮，</strong> 它是另一个 AI 助手。报告在 documenti/verifica_astra/ 中。</p>
 <ul><li>第一轮针对方案第 1 版，结果是“尚未就绪”，有九点。它们在第 2 版中全部得到处理。清单在方案末尾。</li><li>第二轮针对第 2 版：八点已解决，没有新错误。有一点部分未决：对未束缚的牛顿轨道的明确检查。还有：在网格不完整时干净地给出“无效”，而不是让程序崩溃。</li><li>第二轮之后（valuta_dr4.py 2.1）：</li><li>Newton 库逐条轨道检查：200,000 条中有 0 个未束缚状态；</li><li>不完整的网格现在给出“无效”。这已用一个缺失文件和一个只有两个副本的文件测试过（risultati/prova_a_secco/prova_valutazione_casi.log）。</li><li>没有第三轮。</li></ul>
-<p><strong>预注册。</strong> 每个文件在运行之前都已预注册。每次预注册都带有 SHA-256 指纹和 UTC 时间（documenti/registri/）。SHA-256 *指纹*是根据文件内容计算出的代码：文件哪怕略有改变，指纹也会改变。</p>
+<p><strong>预注册。</strong> 每个文件在运行之前都已预注册。预注册带有 SHA-256 指纹和 UTC 时间（documenti/registri/）。SHA-256 *指纹*是根据文件内容计算出的代码：文件哪怕略有改变，指纹也会改变。</p>
 <p><strong>参考文本。</strong> 方案是 documenti/PROTOCOLLO_DR4_v2.md，用意大利文写成。存档的英文文本对它作了概括。</p>
 <p><strong>各节引用的文件。</strong></p>
 <ul><li>第 2 节：查询语句和下载的 SHA-256 在 dati/ 中。选定的样本，含 Gaia 标识符，是 dati/campione_F.csv。El-Badry 的目录在 VizieR 上，它是一个天文目录档案库：J/MNRAS/506/2269。DR4 数值的下载是 codice/registrazione/scarica_dr4.py；转换是 converti_dr4.py，它把数据整理成规范顺序并附上 SHA-256 指纹。</li><li>第 4 节：下载测试在 risultati/scarico/ 中。</li></ul>
 <p><strong>数据包里有什么。</strong></p>
-<ul><li><code>codice/registrazione/</code>：下载、转换、模拟、评估和预演程序（第 2 版；第 1 版在 versione_1/ 中）。</li><li><code>codice/pipeline/</code>：它们所调用的开发程序链中的程序，未作改动。代码中含有作者的路径（E:&#46;..），需要调整。</li><li><code>dati/</code>：查询语句、下载的 SHA-256、含 Gaia 标识符的选定样本。</li><li><code>risultati/</code>：</li><li>库：动力学检查和 SHA-256。六个库（每个 217 MB）未包含在内。它们可以用 orbite.py 或 orbite_mm.py 重新生成。*种子*是 1、12、13、14、15、16。FATT_PASSI 对 Newton 为 1，对其他假设为 4。种子是随机数的起始数字；</li><li>样本、链、预演、下载测试。</li><li><code>documenti/</code>：计划、关于主要解读的决定、方案各版本、核查报告、预注册档案。</li></ul>
+<ul><li><code>codice/registrazione/</code>：下载、转换、模拟、评估和预演程序（第 2 版；第 1 版在 versione_1/ 中）。</li><li><code>codice/pipeline/</code>：它们所调用的开发程序链中的程序，未作改动。代码中含有作者的路径（E:&#46;..），需要调整。</li><li><code>dati/</code>：查询语句、下载的 SHA-256、含 Gaia 标识符的选定样本。</li><li><code>risultati/</code>：</li><li>库：动力学检查和 SHA-256。六个库（每个 217 MB）未包含在内。它们可以用 orbite.py 或 orbite_mm.py 重新生成。*种子*是 1、12、13、14、15、16。FATT_PASSI 对 Newton 为 1，对其他假设为 4。种子是随机数的起始数字；</li><li>样本、链、预演、下载测试。</li><li><code>documenti/</code>：计划、关于主要解读的决定、方案各版本、核查报告、登记表。</li></ul>
 <p><strong>许可。</strong> 文本和材料：CC BY 4.0。代码：MIT。</p>
 <p><strong>这一版本。</strong> 这个学生版是在 AI 助手（Claude）的帮助下根据英文存档文本写成的。首先完成了一份完整的意大利文翻译。然后把这份翻译改写给中小学生看。数字用程序核对过：翻译对照英文文本，这一版本对照翻译。以存档文本为准。</p>
 <p>本中文文本是在 AI 助手的帮助下由英文学生版翻译而成。作者阅读并认可的是意大利文版。</p>
